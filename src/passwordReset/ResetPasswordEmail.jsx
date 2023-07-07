@@ -5,10 +5,12 @@ import logo from './loanifyLogo.svg';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { CircularProgress } from '@mui/material';
 
 export default function ResetPasswordEmail() {
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   const validateEmail = (value) => {
@@ -34,6 +36,7 @@ export default function ResetPasswordEmail() {
 
   const submitEmail = async () => {
     try {
+      setIsLoading(true);
       const response = await axios.post(
         `https://loanifyteama-production.up.railway.app/api/v1/auth/reset-password`,
         { email: email }
@@ -43,6 +46,8 @@ export default function ResetPasswordEmail() {
     } catch (error) {
       console.log(error);
       toast.error('Invalid username! Please try again.');
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -87,9 +92,16 @@ export default function ResetPasswordEmail() {
                 Reset token will be sent to your email
               </p>
             </div>
-            <button type="submit" className="formButton">
-              Submit
-            </button>
+            {isLoading ? (
+              <button type="submit" className="formButton" disabled>
+                <CircularProgress sx={{ color: '#fff' }} size={23} />
+              </button>
+            ) : (
+              <button type="submit" className="formButton">
+                Submit
+              </button>
+            )}
+
             <Link to="/resend-token">
               <p className="ResendTokenText">Resend token</p>
             </Link>

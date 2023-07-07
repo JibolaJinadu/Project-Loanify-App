@@ -22,7 +22,7 @@ export default function ChangePwd() {
     newPassword: '',
     confirmPassword: '',
   });
-
+  const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showNewPassword, setShowNewPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);

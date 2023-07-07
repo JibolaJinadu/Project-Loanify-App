@@ -30,13 +30,7 @@ const renderCustomizedLabel = ({
     </text>
   );
 };
-export default function Chart({
-  approve,
-  close,
-  pending,
-  defaulted,
-  percentages,
-}) {
+export default function Chart({ approve, close, pending, defaulted }) {
   const data = [
     { name: 'Group A', value: close },
     { name: 'Group B', value: pending },
@@ -60,18 +54,6 @@ export default function Chart({
           <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
         ))}
       </Pie>
-      <div className="label-percentage">{`${(percentages[0] * 100).toFixed(
-        0
-      )}%`}</div>
-      <div className="label-percentage">{`${(percentages[1] * 100).toFixed(
-        0
-      )}%`}</div>
-      <div className="label-percentage">{`${(percentages[2] * 100).toFixed(
-        0
-      )}%`}</div>
-      <div className="label-percentage">{`${(percentages[3] * 100).toFixed(
-        0
-      )}%`}</div>
     </PieChart>
   );
 }

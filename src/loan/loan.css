@@ -28,6 +28,7 @@ th {
 }
 .blue-row {
   background-color: #f0f4fc;
+  cursor: pointer;
 }
 tr:hover {
   background-color: #94afee;

@@ -22,7 +22,6 @@ const OverviewPage = () => {
   const [loansClosed, setLoansClosed] = useState();
   const [loansExtended, setLoansExtended] = useState();
   const [loansDefaulted, setLoansDefaulted] = useState();
-  const [percentages, setPercentages] = useState([15, 50, 20, 15]);
   useEffect(() => {
     const fetchData = async () => {
       if (loginToken) {
@@ -46,8 +45,6 @@ const OverviewPage = () => {
           setLoansExtended(responses[0].data.data[4].amount);
           setLoansDefaulted(responses[0].data.data[5].amount);
           setLoansClosed(responses[0].data.data[6].amount);
-          console.log(responses[0].data.data[0].amount);
-          setPercentages([increasePercentage, 50, 20, 15]);
           setLoading(false);
         } catch (error) {
           console.log(error);
@@ -59,6 +56,19 @@ const OverviewPage = () => {
 
     fetchData();
   }, [loginToken]);
+
+  // function getClosedPercent() {
+  //   const close =
+  //     (loansClosed /
+  //       (loansClosed + loansDefaulted + loansApproved + loansPending)) *
+  //     360;
+  //   console.log(close);
+  //   console.log('close');
+  // }
+
+  // useEffect(() => {
+  //   getClosedPercent();
+  // }, []);
 
   return (
     <>
@@ -194,24 +204,23 @@ const OverviewPage = () => {
                 close={loansClosed}
                 defaulted={loansDefaulted}
                 pending={loansPending}
-                percentages={percentages}
               />
             </div>
-            
+
             <div>
-              <div className='label-both-container'>
+              <div className="label-both-container">
                 <div className="label-tabs label-bkg">Pending Loans</div>
                 <div>{loansPending}%</div>
               </div>
-              <div className='label-both-container'>
+              <div className="label-both-container">
                 <div className="label-tabs2 label-bkg">Approved Loans</div>
                 <div>{loansApproved}%</div>
               </div>
-              <div className='label-both-container'>
+              <div className="label-both-container">
                 <div className="label-tabs3 label-bkg">Defaulted Loans</div>
                 <div>{loansDefaulted}%</div>
               </div>
-              <div className='label-both-container'>
+              <div className="label-both-container">
                 <div className="label-tabs4 label-bkg">Closed Loans</div>
                 <div>{loansClosed}%</div>
               </div>

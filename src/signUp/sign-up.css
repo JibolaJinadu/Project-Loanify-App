@@ -89,10 +89,6 @@ input:-webkit-autofill {
   margin-bottom: 15px;
 }
 
-.signUp-input:hover{
-  cursor: pointer;
-}
-
 .errorfield {
   color: red;
   display: block;
@@ -203,10 +199,9 @@ input:-webkit-autofill {
   width: 100%;
 }
 
-
 @media screen and (min-width: 769px) {
-  .container-main{
-    display:none;
+  .container-main {
+    display: none;
   }
   .rd-container-4 {
     position: absolute;
@@ -219,8 +214,8 @@ input:-webkit-autofill {
 }
 
 @media screen and (max-width: 768px) {
-  .container1{
-    display:none;
+  .container1 {
+    display: none;
   }
   .company-logo {
     height: 40px;
@@ -229,11 +224,11 @@ input:-webkit-autofill {
     width: 40%;
     height: 28vh;
   }
-  .form-header{
+  .form-header {
     margin: 0 40%;
     font-size: 25px;
   }
-   .signUp-input1 {
+  .signUp-input1 {
     font-size: 16px;
     font-weight: 500;
     padding: 12px 10px;
@@ -258,20 +253,20 @@ input:-webkit-autofill {
     font-size: 11px;
   }
   .btn-submit1 {
-  padding: 15px 10px;
-  background-color: #010e2a;
-  color: white;
-  font-size: 18px;
-  font-weight: 700;
-  width: 75%;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
-}
+    padding: 15px 10px;
+    background-color: #010e2a;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    width: 75%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }
   .rd-container-41 {
     position: absolute;
     left: 35%;
@@ -283,14 +278,14 @@ input:-webkit-autofill {
 }
 
 @media screen, (min-width: 280px) and (max-width: 540px) {
-  .guy-pix{
+  .guy-pix {
     width: 32%;
     height: 20vh;
   }
   .company-logo {
     height: 22px;
   }
-  .form-header{
+  .form-header {
     font-size: 20px;
     margin: 0 35%;
   }
@@ -311,7 +306,7 @@ input:-webkit-autofill {
     padding: 8px 10px;
     width: 100%;
   }
-    .password-toggle1 {
+  .password-toggle1 {
     text-decoration: underline;
     position: absolute;
     top: 25%;
@@ -319,20 +314,20 @@ input:-webkit-autofill {
     font-size: 5px;
   }
   .btn-submit1 {
-  padding: 10px 5px;
-  background-color: #010e2a;
-  color: white;
-  font-size: 18px;
-  font-weight: 700;
-  width: 70%;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
-}
+    padding: 10px 5px;
+    background-color: #010e2a;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    width: 70%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }
   .rd-container-41 {
     position: absolute;
     left: 25%;
@@ -343,7 +338,7 @@ input:-webkit-autofill {
   }
 }
 
-@media screen and (width: 768px){
+@media screen and (width: 768px) {
   .rd-container-41 {
     position: absolute;
     left: 40%;
@@ -353,7 +348,7 @@ input:-webkit-autofill {
     color: #717070;
   }
 }
-@media screen and (width: 540px){
+@media screen and (width: 540px) {
   .rd-container-41 {
     position: absolute;
     left: 27%;
@@ -363,7 +358,7 @@ input:-webkit-autofill {
     color: #717070;
   }
 }
-@media screen and (width: 820px){
+@media screen and (width: 820px) {
   .rd-container-4 {
     position: absolute;
     left: 15%;
@@ -373,7 +368,7 @@ input:-webkit-autofill {
     color: #717070;
   }
 }
-@media screen and (width: 912px){
+@media screen and (width: 912px) {
   .rd-container-4 {
     position: absolute;
     left: 15%;
@@ -385,14 +380,14 @@ input:-webkit-autofill {
 }
 
 @media screen, (max-width: 280px) {
-  .guy-pix{
+  .guy-pix {
     width: 32%;
     height: 20vh;
   }
   .company-logo {
     height: 22px;
   }
-  .form-header{
+  .form-header {
     font-size: 17px;
     margin: 0 30%;
   }
@@ -421,26 +416,26 @@ input:-webkit-autofill {
     font-size: 5px;
   }
   .btn-submit1 {
-  padding: 10px 5px;
-  background-color: #010e2a;
-  color: white;
-  font-size: 15px;
-  font-weight: 700;
-  width: 60%;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
+    padding: 10px 5px;
+    background-color: #010e2a;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    width: 60%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }
+  .rd-container-41 {
+    position: absolute;
+    left: 30%;
+    margin-top: 0;
+    font-size: 10px;
+    font-weight: 700;
+    color: #717070;
+  }
 }
-.rd-container-41 {
-  position: absolute;
-  left: 30%;
-  margin-top: 0;
-  font-size: 10px;
-  font-weight: 700;
-  color: #717070;
-}
-} 

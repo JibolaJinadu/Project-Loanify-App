@@ -9,7 +9,8 @@ import { toast } from 'react-toastify';
 import Cookies from 'js-cookie';
 import { AuthContext } from '../AuthContext';
 import guyy from './Assets/business guy.png';
-import './sign-up-resp.css'
+import './sign-up-resp.css';
+import { CircularProgress } from '@mui/material';
 
 const INITIAL_STATE = {
   firstName: '',
@@ -19,7 +20,6 @@ const INITIAL_STATE = {
   email: '',
   password: '',
 };
-
 
 const VALIDATION = {
   email: [
@@ -89,9 +89,9 @@ const SignUp = () => {
 
   const [form, setForm] = useState(INITIAL_STATE);
   const [errorFields, setErrorFields] = useState({});
-  const [isSuccess, setIsSuccess] = useState(false);
   const [submitError, setSubmitError] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (event) => {
@@ -138,6 +138,7 @@ const SignUp = () => {
     if (!validateForm()) return;
 
     try {
+      setIsLoading(true);
       const { firstName, lastName, role, phoneNumber, email, password } = form;
       const userData = {
         firstName,
@@ -155,7 +156,6 @@ const SignUp = () => {
 
       Cookies.set('signUpToken', response.data.token, { expires: 7 });
       setSignUpToken(response.data.token);
-      setIsSuccess(true);
       setSubmitError('');
       toast.success('Sign up successfully!');
       setForm(INITIAL_STATE);
@@ -181,6 +181,8 @@ const SignUp = () => {
       } else {
         toast.error('There was an error signing up. Please try again later.');
       }
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -191,7 +193,6 @@ const SignUp = () => {
   return (
     <>
       <section>
-        {isSuccess}
         {submitError && <div className="failed">{submitError}</div>}
         <div className="container1">
           <div className="left-div"></div>
@@ -200,21 +201,23 @@ const SignUp = () => {
             <h1 className="rd-container-2">Sign Up</h1>
             <div className="rd-container-3">
               <form className="signup-form" onSubmit={handleSubmit}>
-              <div className="field">
-                <input
-                  className="signUp-input"
-                  id="firstName"
-                  type="text"
-                  placeholder="First name"
-                  value={form.firstName}
-                  onChange={handleChange}
-                  onBlur={() => validateField('firstName', form.firstName)}
-                  autoComplete={nanoid()}
-                />
-                {errorFields.firstName?.length > 0 && (
-                  <span className="errorfield">{errorFields.firstName[0]}</span>
-                )}
-              </div>
+                <div className="field">
+                  <input
+                    className="signUp-input"
+                    id="firstName"
+                    type="text"
+                    placeholder="First name"
+                    value={form.firstName}
+                    onChange={handleChange}
+                    onBlur={() => validateField('firstName', form.firstName)}
+                    autoComplete={nanoid()}
+                  />
+                  {errorFields.firstName?.length > 0 && (
+                    <span className="errorfield">
+                      {errorFields.firstName[0]}
+                    </span>
+                  )}
+                </div>
 
                 <div className="field">
                   <input
@@ -309,9 +312,15 @@ const SignUp = () => {
                   ))}
                 </div>
                 <div className="signup-field">
-                  <button className="btn-submit" type="submit">
-                    Submit
-                  </button>
+                  {isLoading ? (
+                    <button className="btn-submit" type="submit" disabled>
+                      <CircularProgress sx={{ color: '#fff' }} size={23} />
+                    </button>
+                  ) : (
+                    <button className="btn-submit" type="submit">
+                      Submit
+                    </button>
+                  )}
                 </div>
               </form>
               <p className="rd-container-4">
@@ -326,12 +335,12 @@ const SignUp = () => {
         </div>
 
         <div className="container-main">
-        <div className="upper-container">
-          <img src={guyy} alt="business-guy" className="guy-pix" />
-          <img src={logo} alt="logo" className="company-logo" />
-        </div>
-        <div className="form-section">
-          <h1 className="form-header">Sign Up</h1>
+          <div className="upper-container">
+            <img src={guyy} alt="business-guy" className="guy-pix" />
+            <img src={logo} alt="logo" className="company-logo" />
+          </div>
+          <div className="form-section">
+            <h1 className="form-header">Sign Up</h1>
             <form className="form-wrap" onSubmit={handleSubmit}>
               <div className="field1">
                 <input
@@ -443,9 +452,15 @@ const SignUp = () => {
                 ))}
               </div>
               <div className="signup-field1">
-                <button className="btn-submit1" type="submit">
-                  Submit
-                </button>
+                {isLoading ? (
+                  <button className="btn-submit1" type="submit" disabled>
+                    <CircularProgress sx={{ color: '#fff' }} size={23} />
+                  </button>
+                ) : (
+                  <button className="btn-submit1" type="submit">
+                    Submit
+                  </button>
+                )}
               </div>
             </form>
             <p className="rd-container-41">
@@ -455,10 +470,9 @@ const SignUp = () => {
                 Log in
               </Link>
             </p>
-        </div>
+          </div>
         </div>
       </section>
-      
     </>
   );
 };

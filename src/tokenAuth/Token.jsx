@@ -6,14 +6,14 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../AuthContext';
+import { CircularProgress } from '@mui/material';
 
 const Token = () => {
   const { signUpToken } = useContext(AuthContext);
   const [tokenDigits, setTokenDigits] = useState(['', '', '', '']);
   const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
-
-  console.log(`token ${signUpToken}`);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleTokenChange = (index, event) => {
     const digit = event.target.value;
@@ -50,6 +50,7 @@ const Token = () => {
     }
 
     try {
+      setIsLoading(true);
       // Send a request to the server to verify the token PIN
       const response = await axios.post(
         'https://loanifyteama-production.up.railway.app/api/v1/auth/verify-email/',
@@ -65,6 +66,8 @@ const Token = () => {
     } catch (error) {
       setErrorMessage('An error occurred. Please try again.');
       console.log(error);
+    } finally {
+      setIsLoading(false);
     }
 
     setTokenDigits(['', '', '', '']);
@@ -104,9 +107,15 @@ const Token = () => {
           )}
 
           <div className="button-div">
-            <button type="submit" className="submit-token-btn">
-              Proceed to the Dashboard
-            </button>
+            {isLoading ? (
+              <button type="submit" className="submit-token-btn" disabled>
+                <CircularProgress sx={{ color: '#fff' }} size={23} />
+              </button>
+            ) : (
+              <button type="submit" className="submit-token-btn">
+                Proceed to the Dashboard
+              </button>
+            )}
           </div>
         </form>
       </div>

@@ -8,6 +8,7 @@ import { toast } from 'react-toastify';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { AuthContext } from '../AuthContext';
+import { CircularProgress } from '@mui/material';
 
 function Login() {
   const { loginToken, setLoginToken } = useContext(AuthContext);
@@ -23,6 +24,7 @@ function Login() {
   });
 
   const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
@@ -30,6 +32,7 @@ function Login() {
   const navigate = useNavigate();
   const submitForm = async () => {
     try {
+      setIsLoading(true);
       const response = await axios.post(
         `https://loanifyteama-production.up.railway.app/api/v1/auth/login/`,
         formData,
@@ -46,6 +49,8 @@ function Login() {
     } catch (error) {
       console.log(error);
       toast.error('Invalid Username or Password! Please try again.');
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -153,9 +158,15 @@ function Login() {
             </Link>
           </div>
           <div className="form-group">
-            <button type="submit" className="btn btn-blue">
-              Log In
-            </button>
+            {isLoading ? (
+              <button type="submit" className="btn btn-blue" disabled>
+                <CircularProgress sx={{ color: '#fff' }} size={23} />
+              </button>
+            ) : (
+              <button type="submit" className="btn btn-blue">
+                Log In
+              </button>
+            )}
           </div>
           <p className="team">
             Join the team ?{' '}

@@ -116,6 +116,7 @@ td {
 
 .client-row {
   background-color: #f0f4fc;
+  cursor: pointer;
 }
 
 .clients-input {

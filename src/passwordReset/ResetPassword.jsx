@@ -3,7 +3,7 @@ import TextField from '@mui/material/TextField';
 import './resetPassword.css';
 import businessGuy from '../login/img/business guy.png';
 import logo from './loanifyLogo.svg';
-import { IconButton, InputAdornment } from '@mui/material';
+import { CircularProgress, IconButton, InputAdornment } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -20,6 +20,7 @@ function ResetPassword() {
   const [confirmPasswordError, setConfirmPasswordError] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   const validateCode = (value) => {
@@ -102,6 +103,7 @@ function ResetPassword() {
 
   const submitForm = async () => {
     try {
+      setIsLoading(true);
       const response = await axios.post(
         `https://loanifyteama-production.up.railway.app/api/v1/auth/update-password`,
         formData
@@ -111,6 +113,8 @@ function ResetPassword() {
     } catch (error) {
       console.log(error);
       toast.error('Invalid Username or Password! Please try again.');
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -251,9 +255,16 @@ function ResetPassword() {
                 </span>
               )}
             </div> */}
-            <button type="submit" className="formButton">
-              Reset Password
-            </button>
+
+            {isLoading ? (
+              <button type="submit" className="formButton">
+                <CircularProgress sx={{ color: '#fff' }} size={23} />
+              </button>
+            ) : (
+              <button type="submit" className="formButton">
+                Reset Password
+              </button>
+            )}
           </div>
         </form>
       </div>
