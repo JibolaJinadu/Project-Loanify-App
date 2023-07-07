@@ -76,7 +76,12 @@ export default function NotificationDialog() {
   return (
     <div>
       <button className="icon-btn" onClick={handleClickOpen}>
-        <img src={notification} className="notify-icon" alt="" />
+        <img
+          src={notification}
+          style={{ height: '18px' }}
+          className="notify-icon"
+          alt=""
+        />
       </button>
       <BootstrapDialog
         onClose={handleClose}

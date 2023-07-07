@@ -74,7 +74,7 @@ export default function MessageDialog() {
   return (
     <div>
       <button className="icon-btn" onClick={handleClickOpen}>
-        <img src={mail} alt="" />
+        <img src={mail} alt="" style={{ height: '16px' }} />
       </button>
       <BootstrapDialog
         onClose={handleClose}

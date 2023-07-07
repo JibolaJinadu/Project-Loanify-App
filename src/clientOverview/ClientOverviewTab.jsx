@@ -42,14 +42,14 @@ const ClientOverviewTab = ({ onTabChange }) => {
           '& .Mui-selected': {
             borderBottom: 'none',
           },
-          borderTop: '1px solid #010E2A',
-          borderRight: '1px solid #010E2A',
-          borderLeft: '1px solid #010E2A',
+          borderTop: '1px solid #83a1e8',
+          borderRight: '1px solid #83a1e8',
+          borderLeft: '1px solid #83a1e8',
           margin: '0 20px',
         }}
       >
         <div
-          style={{ borderBottom: '1px solid #010E2A', padding: '5px' }}
+          style={{ borderBottom: '1px solid #83a1e8', padding: '5px' }}
         ></div>
         <Tab
           label="General Information"
@@ -58,15 +58,15 @@ const ClientOverviewTab = ({ onTabChange }) => {
               color: '#010E2A',
               marginTop: '10px',
               borderBottom: '0',
-              borderTop: '1px solid #010E2A',
-              borderRight: '1px solid #010E2A',
-              borderLeft: '1px solid #010E2A',
+              borderTop: '1px solid #83a1e8',
+              borderRight: '1px solid #83a1e8',
+              borderLeft: '1px solid #83a1e8',
             },
             color: '#010E2A',
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
-            borderBottom: '1px solid #010E2A',
+            borderBottom: '1px solid #83a1e8',
           }}
         />
         <Tab
@@ -76,15 +76,15 @@ const ClientOverviewTab = ({ onTabChange }) => {
               color: '#010E2A',
               marginTop: '10px',
               borderBottom: '0',
-              borderTop: '1px solid #010E2A',
-              borderRight: '1px solid #010E2A',
-              borderLeft: '1px solid #010E2A',
+              borderTop: '1px solid #83a1e8',
+              borderRight: '1px solid #83a1e8',
+              borderLeft: '1px solid #83a1e8',
             },
             color: '#010E2A',
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
-            borderBottom: '1px solid #010E2A',
+            borderBottom: '1px solid #83a1e8',
           }}
         />
         <Tab
@@ -94,15 +94,15 @@ const ClientOverviewTab = ({ onTabChange }) => {
               color: '#010E2A',
               marginTop: '10px',
               borderBottom: '0',
-              borderTop: '1px solid #010E2A',
-              borderRight: '1px solid #010E2A',
-              borderLeft: '1px solid #010E2A',
+              borderTop: '1px solid #83a1e8',
+              borderRight: '1px solid #83a1e8',
+              borderLeft: '1px solid #83a1e8',
             },
             color: '#010E2A',
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
-            borderBottom: '1px solid #010E2A',
+            borderBottom: '1px solid #83a1e8',
           }}
         />
         <Tab
@@ -112,19 +112,19 @@ const ClientOverviewTab = ({ onTabChange }) => {
               color: '#010E2A',
               marginTop: '10px',
               borderBottom: '0',
-              borderTop: '1px solid #010E2A',
-              borderLeft: '1px solid #010E2A',
-              borderRight: '1px solid #010E2A',
+              borderTop: '1px solid #83a1e8',
+              borderLeft: '1px solid #83a1e8',
+              borderRight: '1px solid #83a1e8',
             },
             color: '#010E2A',
             fontWeight: '700',
             textTransform: 'none',
             fontSize: '15px',
-            borderBottom: '1px solid #010E2A',
+            borderBottom: '1px solid #83a1e8',
           }}
         />
         <div
-          style={{ borderBottom: '1px solid #010E2A', padding: '5px' }}
+          style={{ borderBottom: '1px solid #83a1e8', padding: '5px' }}
         ></div>
       </Tabs>
       <TabPanel value={value} index={1}>

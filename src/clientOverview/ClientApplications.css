@@ -11,7 +11,7 @@
   padding-right: 10px;
   background-color: white;
   text-align: left;
-  border: 1px solid lightgrey;
+  border: 1px solid #83a1e8;
 }
 
 .appCheckbox {
@@ -36,10 +36,9 @@
 @media only screen and (min-width: 1200px) {
   .details,
   .details-title {
-    border: 1px solid lightgrey;
+    border: 1px solid #83a1e8;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 130px;
     height: 50px;
     padding-right: 10px;
     padding-top: 2.5px;
@@ -226,7 +225,7 @@
 @media only screen and (max-width: 600px) {
   .details,
   .details-title {
-    border: 1px solid lightgrey;
+    border: 1px solid #83a1e8;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 3px;
@@ -322,7 +321,7 @@
 @media only screen and (min-width: 600px) {
   .details,
   .details-title {
-    border: 1px solid lightgrey;
+    border: 1px solid #83a1e8;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
@@ -418,7 +417,7 @@
 @media only screen and (min-width: 768px) {
   .details,
   .details-title {
-    border: 1px solid lightgrey;
+    border: 1px solid #83a1e8;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
@@ -514,10 +513,9 @@
 @media only screen and (min-width: 992px) {
   .details,
   .details-title {
-    border: 1px solid lightgrey;
+    border: 1px solid #83a1e8;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 130px;
     height: 50px;
     padding-left: 10px;
     padding-right: 10px;

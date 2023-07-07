@@ -74,7 +74,7 @@ export default function UserDialog() {
   return (
     <div>
       <button className="icon-btn" onClick={handleClickOpen}>
-        <img src={avatar} alt="" style={{ height: '30px' }} />
+        <img src={avatar} alt="" style={{ height: '24px' }} />
       </button>
       <BootstrapDialog
         onClose={handleClose}

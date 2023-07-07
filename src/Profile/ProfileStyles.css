@@ -98,6 +98,7 @@
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  cursor: pointer;
 }
 
 .toggleBox:after {
@@ -131,6 +132,7 @@
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  cursor: pointer;
 }
 
 .toggleRed:after {

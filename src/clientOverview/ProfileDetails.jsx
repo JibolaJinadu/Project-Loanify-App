@@ -6,21 +6,15 @@ import message from './img/messages icon.svg';
 
 const ProfileDetails = () => {
   return (
-    <div className="flex">
+    <div className="flexProfile">
       <div className="profile-flex">
-        <img
-          src={temi}
-          alt="image"
-          className='profileImage'
-        ></img>
+        <img src={temi} alt="image" className="profileImage"></img>
         <div className="highlighted-client">
           <h3>Temidayo Adebayo</h3>
-          <p className='caseId'>
-            Case ID:RRZU9D6BVG
-          </p>
+          <p className="caseId">Case ID:RRZU9D6BVG</p>
           <div className="loan-contact">
             <img src={telephone} alt="tel-icon" className="profile-icon" />
-            <p className='tel-no'> 09055555558 </p>
+            <p className="tel-no"> 09055555558 </p>
             <img
               src={message}
               alt="tel-icon"
