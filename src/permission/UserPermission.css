@@ -1,0 +1,41 @@
+/* UserPermission CSS */
+#users {
+  width: 100%;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  height: 100%;
+  background-color: white;
+}
+
+th {
+  background-color: white;
+  color: black;
+  border: 5 px solid #131313;
+  font-size: 40px;
+  font-weight: 700px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+td label {
+  margin-right: 10px;
+}
+
+.permit {
+  border: none;
+  color: gray;
+}
+
+tr:hover {
+  background-color: #94afee;
+}
+
+.rowWrapper {
+  background-color: rgb(233, 242, 245);
+  border-bottom: 10px solid white;
+  /* margin-bottom: 20px; */
+}
+
+.rowWrapper:nth-child(:first-child(1)) {
+  border-top: 10px solid white;
+}

@@ -1,0 +1,126 @@
+/* SignUp CSS */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+  }
+  
+  /* this changes background-color after autofill*/
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    -webkit-text-fill-color: black !important;
+  }
+  
+  .container-main {
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f0f4fc;
+  }
+  
+  .upper-container{
+    display: flex;
+    align-items: center;
+    gap: 15%;
+  }
+  
+  .form-section{
+    width: 100%;
+    margin: 8% 0;
+  }
+ 
+  
+  .form-wrap {
+    padding: 15px 0;
+    border-radius: 5px;
+    border: none;
+    width: 70vw;
+    margin: auto;
+  }
+
+  .field1 {
+    margin-bottom: 20px;
+  }
+  
+  .signUp-input1:hover{
+    cursor: pointer;
+  }
+  
+  .errorfield1 {
+    color: red;
+    display: block;
+    font-size: 12px;
+  }
+  
+  ::placeholder {
+    font-size: 14px;
+    font-weight: 700;
+    color: #717070;
+  }
+  
+  .password-input-container1 {
+    position: relative;
+  }
+
+  .signup-field1 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .button-2 {
+    background-color: #010e2a;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    width: 25vw;
+    padding: 15px 10px;
+    border: none;
+    cursor: pointer;
+    margin: 20px 60px;
+    display: block;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }
+  
+  .sent {
+    font-size: 28px;
+    font-weight: 700;
+    padding-bottom: 20px;
+  }
+  
+  .go-back {
+    text-decoration: none;
+    font: 9px;
+    font-weight: bold;
+    color: #0744d3;
+  }
+  
+  .Next {
+    position: absolute;
+    top: 90%;
+    left: 90%;
+  }
+  
+  .message-sent {
+    text-align: center;
+    max-width: 43vw;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    background-color: #f0f4fc;
+  }
+  
+  .Next a {
+    font-size: 16px;
+  }
+  
+  .signUp-btn1 {
+    color: #0744d3;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  
+  .css-1aa5qj0-MuiInputBase-root-MuiInput-root {
+    width: 100%;
+  }

@@ -1,0 +1,96 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.dropdown-container {
+  text-align: left;
+  border: 1px solid #ccc;
+  position: relative;
+  border-radius: 5px;
+}
+
+.dropdown-input {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.container {
+  text-align: center;
+}
+.toggle-switch {
+  position: relative;
+  width: 75px;
+  display: inline-block;
+  text-align: left;
+  top: 8px;
+}
+.checkbox {
+  display: none;
+}
+.label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0 solid #bbb;
+  border-radius: 20px;
+}
+.inner {
+  display: block;
+  width: 200%;
+  border-radius: 30%;
+  transition: 0.3s;
+}
+.inner:before,
+.inner:after {
+  float: left;
+  width: 50%;
+  height: 36px;
+  padding: 0;
+  color: #fff;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.inner:before {
+  content: '';
+  padding-left: 10px;
+  border-radius: 30px;
+  background-color: blue;
+  color: blue;
+}
+.inner:after {
+  content: '';
+  padding-right: 10px;
+  border: 1px solid blue;
+  color: blue;
+  text-align: right;
+}
+.switch {
+  display: block;
+  width: 24px;
+  margin: 5px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 40px;
+  border: 0 solid white;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+.checkbox:checked + .label .inner {
+  margin-left: 0;
+}
+.checkbox:checked + .label .switch {
+  right: 0px;
+}
+
+.language {
+  display: block;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+}

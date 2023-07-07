@@ -1,0 +1,131 @@
+.report-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+align {
+  display: flex;
+}
+.gap-report {
+  gap: 30px;
+}
+.base-report {
+  border-radius: 3px;
+  width: 60%;
+  text-align: center;
+  margin-top: 0;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.white-report {
+  border: 2px solid white;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.self-report {
+  border-radius: 3px;
+  width: 60%;
+  text-align: center;
+  box-shadow: rgba(121, 36, 43, 0.4) 0px 0px 0px 2px,
+    rgba(94, 19, 19, 0.65) 0px 4px 6px -1px,
+    rgba(177, 0, 0, 0.08) 0px 1px 0px inset;
+}
+.solo-report {
+  color: #d30744;
+}
+.select-bg {
+  padding: 7px 15px;
+  color: grey;
+  border-radius: 7px;
+}
+.set-bg {
+  background-color: white;
+}
+.move-down {
+  margin-bottom: 20px;
+}
+.move-left {
+  padding-right: 100px;
+}
+.dot-report {
+  background-color: #d30744;
+  margin-right: 5px;
+  padding: 1px 5px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.shift-report {
+  margin-block: 20px;
+}
+.report-dark {
+  font-weight: 600;
+}
+.button-report {
+  background-color: #3969dc;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  padding: 17px 70px;
+  border: none;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.set {
+  margin-top: 15px;
+}
+.set-top {
+  margin-top: 30px;
+}
+.mid-report {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-report {
+  display: flex;
+  justify-content: right;
+}
+.sect-top {
+  width: 50%;
+  padding: 20px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.hr-report {
+  border: 1px solid white;
+  margin-inline: -20px;
+}
+.bg-report {
+  background-color: rgb(240, 244, 252);
+}
+.size-font {
+  font-size: 15px;
+  text-align: left;
+  padding: 5px 10px;
+}
+.below {
+  margin-top: 100px;
+}
+.beneath {
+  margin-top: 50px;
+}
+.report-piechart {
+  display: flex;
+  justify-content: right;
+}
+
+.font-pad {
+  padding: 5px 10px;
+}

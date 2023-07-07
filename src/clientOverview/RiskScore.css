@@ -1,0 +1,41 @@
+.risk-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+
+.risk-scoreClient,
+.risk-grade {
+  padding-top: 40px;
+}
+
+.risk-space {
+  padding-left: 20px;
+}
+
+.risk-scoreClient p {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.risk-grade p {
+  font-size: 14px;
+}
+
+.comment-container {
+  display: flex;
+}
+
+.risk-comment {
+  font-size: 14px;
+  font-weight: 700;
+}
+.risk-highlighted {
+  background-color: #f0f4fc;
+  width: 500px;
+  height: 80px;
+  border-radius: 0.5rem;
+}
+
+.risk-feedback {
+  font-size: 14px;
+}

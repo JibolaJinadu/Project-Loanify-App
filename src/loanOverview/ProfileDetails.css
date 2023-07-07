@@ -1,0 +1,59 @@
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 15rem;
+  margin: 0 20px;
+  padding-bottom: 20px;
+}
+.profile-flex {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.loan-type {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.loan-contact {
+  display: flex;
+  align-items: center;
+}
+.highlighted {
+  /* background-color: #f0f4fc; */
+  width: 318px;
+  padding: 2px;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 30px;
+}
+.small {
+  background-color: #f3b515;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 0.2rem;
+}
+.approve {
+  width: 110px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid #83a1e8;
+  border-radius: 0.2rem;
+}
+.decline {
+  width: 110px;
+  height: 40px;
+  color: white;
+  background-color: #d30744;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.pad-top {
+  padding-top: 10px;
+}

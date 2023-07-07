@@ -1,0 +1,42 @@
+.flex-container {
+    display:flex;
+    justify-content: space-between;
+    line-height: 3.5rem;
+}
+ .flex-container input {
+    padding: 10px;
+    width: 200px;
+    height:40px;
+    border-radius: 0.5rem;
+    border: 1px solid #83a1e8;
+}
+.cfi {
+    padding-top: 30px;
+}
+.form-setting {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 200px;
+}
+.form-setting label {
+    display: block;
+    width: 200px;
+    padding-top: 20px;
+    color: #7a7979;
+    font-size: 13px;
+    font-weight: small;
+}
+.form-setting input {
+    margin-top: 10px;
+    width: 200px;
+    height:40px;
+    padding: 10px;
+    border-radius: 0.5rem;
+    border: 1px solid #83a1e8;
+}
+@media (max-width:600px) {
+     .flex-container {
+      display: flex;
+     flex-direction: column;
+     }
+    } 

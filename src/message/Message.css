@@ -1,0 +1,125 @@
+.messageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.messageBox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.messageWrapper img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.messageTitle h5 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.messageTitle p {
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #717070;
+}
+
+.time {
+  font-size: 16px;
+  font-weight: 400;
+  color: #8d8787;
+}
+
+.message-pic{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.message-container{
+    background-color: red;
+    
+    
+    
+}
+
+.message{
+    background-color: green;
+    width: 1000px;
+}
+
+.userInfo{
+    background-color: blue;
+    
+}
+
+
+/* .Message-container{
+    padding: 40px 60px;
+    background-color: blueviolet;
+}
+
+.Profile-container{
+    background-color: aliceblue;
+    align-items: flex-start;
+    display:flex;
+    flex-direction: column;
+    width: 500px;
+    gap:20px;
+    line-height: 20px;
+    padding: 10px 60px;
+}
+
+ .Profile-pic{ 
+    border-radius: 50%;
+    vertical-align: middle; 
+    width: 50px;
+    height: px;
+    padding-right: 100px;
+
+} 
+
+.Profile-info{
+    display: flex;
+    align-items: flex-end;
+}
+
+.p{
+align-items: flex-end;
+}
+.profileUser{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+
+}
+.info{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    ;
+
+}
+
+.profile-message{
+    flex: 80 0% 40%;
+    margin-right: 60px;
+}
+.message-time{
+    padding-left: 20px 60px;
+    margin-left: 100px;
+    align-items: flex-end;
+    text-align: end;
+}
+ */
+
+ 

@@ -1,0 +1,609 @@
+.clientContainer {
+  padding-top: 10px;
+}
+
+.loan-btn {
+  width: 100%;
+  height: 50px;
+  padding-bottom: 2.5px;
+  padding-top: 2.5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+  text-align: left;
+  border: 1px solid lightgrey;
+}
+
+.appCheckbox {
+  padding-left: 70px;
+}
+
+.spacing {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.loanDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.loanDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media only screen and (min-width: 1200px) {
+  .details,
+  .details-title {
+    border: 1px solid lightgrey;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 130px;
+    height: 50px;
+    padding-right: 10px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    padding-left: 10px;
+    align-items: center;
+  }
+
+  .details p {
+    font-weight: 900;
+    font-size: 14px;
+  }
+
+  .details-title h5 {
+    font-size: 16px;
+  }
+
+  #case-number {
+    font-weight: lighter;
+  }
+
+  .barContainer {
+    min-height: 100vh;
+    width: 100vw;
+    align-items: center;
+  }
+
+  .progress,
+  .progressBar {
+    width: 10rem;
+    height: 1.5rem;
+    border-radius: 1.2rem;
+    background-color: rgb(243, 243, 243);
+  }
+
+  .progressBar {
+    background-color: green;
+    animation: backp 3s;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: none;
+  }
+  .textName {
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    display: block;
+    padding-top: 5px;
+  }
+
+  @keyframes backp {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  .progress-one,
+  .progress-bar {
+    width: 10rem;
+    height: 1.5rem;
+    border-radius: 1.2rem;
+    background-color: rgb(243, 243, 243);
+  }
+
+  .progress-bar {
+    background-color: black;
+    animation: loader 3s;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    border-radius: 1rem;
+    box-shadow: none;
+  }
+
+  @keyframes loader {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 90%;
+    }
+  }
+}
+
+.collateralInformation {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.arrow-icon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pointer {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.client-container {
+  display: flex;
+}
+.client-contract {
+  display: flex;
+  flex-direction: column;
+  line-height: 5rem;
+  margin-left: 20px;
+}
+
+.print-button {
+  display: flex;
+  gap: 1rem;
+}
+
+.print-btn {
+  width: 80px;
+  height: 40px;
+  font-size: small;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 1px solid #c1d0f4;
+  border-radius: 8px;
+}
+
+.return-btn {
+  width: 150px;
+  height: 40px;
+  font-size: small;
+  cursor: pointer;
+  background-color: #0744d3;
+  margin-top: 30px;
+  margin-left: 30px;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+}
+
+.edit-btn {
+  width: 110px;
+  height: 40px;
+  font-size: small;
+  cursor: pointer;
+  background-color: #0744d3;
+  color: #fff;
+  margin-right: 40px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+}
+
+.contract-container {
+  border: 30px double #f0f4fc;
+  background-color: #f0f4fc;
+  line-height: 1.6rem;
+}
+
+.form-text {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+}
+
+.white-background {
+  background-color: white;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 14px;
+}
+
+.data-input {
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .details,
+  .details-title {
+    border: 1px solid lightgrey;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 3px;
+    height: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 4px;
+    padding-top: 2px;
+    align-items: center;
+  }
+
+  .details p {
+    font-weight: 900;
+    font-size: 6px;
+  }
+
+  .details-title h5 {
+    font-size: 8px;
+  }
+
+  #case-number {
+    font-weight: lighter;
+  }
+
+  .barContainer {
+    min-height: 100vh;
+    width: 100vw;
+    align-items: center;
+  }
+
+  .progress,
+  .progressBar {
+    width: 3.5rem;
+    height: 1.5rem;
+    border-radius: 1.2rem;
+    background-color: rgb(243, 243, 243);
+  }
+
+  .progressBar {
+    background-color: green;
+    animation: backp 3s;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: none;
+  }
+  .textName {
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    display: block;
+    padding-top: 5px;
+  }
+
+  @keyframes backp {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  .progress-one,
+  .progress-bar {
+    width: 3.5rem;
+    height: 1.5rem;
+    border-radius: 1rem;
+    background-color: rgb(243, 243, 243);
+  }
+
+  .progress-bar {
+    background-color: black;
+    animation: loader 3s;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    border-radius: 1rem;
+    box-shadow: none;
+  }
+
+  @keyframes loader {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 90%;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .details,
+  .details-title {
+    border: 1px solid lightgrey;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    align-items: center;
+  }
+
+  .details p {
+    font-weight: 900;
+    font-size: 12px;
+  }
+
+  .details-title h5 {
+    font-size: 14px;
+  }
+
+  #case-number {
+    font-weight: lighter;
+  }
+
+  .barContainer {
+    min-height: 100vh;
+    width: 100vw;
+    align-items: center;
+  }
+
+  .progress,
+  .progressBar {
+    width: 8rem;
+    height: 1.5rem;
+    border-radius: 1.2rem;
+    background-color: rgb(243, 243, 243);
+  }
+
+  .progressBar {
+    background-color: green;
+    animation: backp 3s;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: none;
+  }
+  .textName {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    padding-top: 5px;
+  }
+
+  @keyframes backp {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  .progress-one,
+  .progress-bar {
+    width: 8rem;
+    height: 1.5rem;
+    border-radius: 1.2rem;
+    background-color: rgb(243, 243, 243);
+  }
+
+  .progress-bar {
+    background-color: black;
+    animation: loader 3s;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    border-radius: 1rem;
+    box-shadow: none;
+  }
+
+  @keyframes loader {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 90%;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .details,
+  .details-title {
+    border: 1px solid lightgrey;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    align-items: center;
+  }
+
+  .details p {
+    font-weight: 900;
+    font-size: 14px;
+  }
+
+  .details-title h5 {
+    font-size: 16px;
+  }
+
+  #case-number {
+    font-weight: lighter;
+  }
+
+  .barContainer {
+    min-height: 100vh;
+    width: 100vw;
+    align-items: center;
+  }
+
+  .progress,
+  .progressBar {
+    width: 8rem;
+    height: 1.5rem;
+    border-radius: 1.2rem;
+    background-color: rgb(243, 243, 243);
+  }
+
+  .progressBar {
+    background-color: green;
+    animation: backp 3s;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: none;
+  }
+  .textName {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    padding-top: 5px;
+  }
+
+  @keyframes backp {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  .progress-one,
+  .progress-bar {
+    width: 8rem;
+    height: 1.5rem;
+    border-radius: 1.2rem;
+    background-color: rgb(243, 243, 243);
+  }
+
+  .progress-bar {
+    background-color: black;
+    animation: loader 3s;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    border-radius: 1rem;
+    box-shadow: none;
+  }
+
+  @keyframes loader {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 90%;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .details,
+  .details-title {
+    border: 1px solid lightgrey;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 130px;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    background-color: #fff;
+    align-items: center;
+  }
+
+  .details p {
+    font-weight: 900;
+    font-size: 12px;
+  }
+
+  .details-title h5 {
+    font-size: 14px;
+  }
+
+  #case-number {
+    font-weight: lighter;
+  }
+
+  .barContainer {
+    min-height: 100vh;
+    width: 100vw;
+    align-items: center;
+  }
+
+  .progress,
+  .progressBar {
+    width: 8rem;
+    height: 1.5rem;
+    border-radius: 1.2rem;
+    background-color: rgb(243, 243, 243);
+  }
+
+  .progressBar {
+    background-color: green;
+    animation: backp 3s;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: none;
+  }
+  .textName {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    padding-top: 5px;
+  }
+
+  @keyframes backp {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  .progress-one,
+  .progress-bar {
+    width: 8rem;
+    height: 1.5rem;
+    border-radius: 1.2rem;
+    background-color: rgb(243, 243, 243);
+  }
+
+  .progress-bar {
+    background-color: black;
+    animation: loader 3s;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    border-radius: 1rem;
+    box-shadow: none;
+  }
+
+  @keyframes loader {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 90%;
+    }
+  }
+}

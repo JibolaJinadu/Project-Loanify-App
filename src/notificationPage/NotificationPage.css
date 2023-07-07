@@ -1,0 +1,55 @@
+.noticeWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  
+  .noticeBox {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .noticeWrapper img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+  
+  .messageTitle h5 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  
+  .noticeTitle p {
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #717070;
+  }
+  
+  .time {
+    font-size: 16px;
+    font-weight: 400;
+    color: #8d8787;
+  }
+  
+  .notice-pic{
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+  }
+
+  .button {
+    background-color: blue;
+    border:none;
+    border-radius: 50%;
+  }
+
+  
+  

@@ -1,0 +1,446 @@
+/* SignUp CSS */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+}
+
+/* this changes background-color after autofill*/
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: black !important;
+}
+
+.container1 {
+  display: flex;
+  height: 100vh;
+}
+
+.left-div {
+  flex: 0 0 30%;
+  background-image: url('./Assets/business guy.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.right-div {
+  flex: 0 0 70%;
+  background-color: #f0f4fc;
+  position: relative;
+}
+
+.rd-container-1 {
+  position: absolute;
+  top: 5%;
+  left: 9.5%;
+  height: 30px;
+}
+
+.rd-container-2 {
+  position: absolute;
+  top: 14%;
+  left: 40%;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.rd-container-3 {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+/* .rd-container-4 {
+  position: absolute;
+  left: 35%;
+  margin-top: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #717070;
+} */
+
+.signup-form {
+  padding: 15px 0;
+  border-radius: 5px;
+  border: none;
+  width: 45vw;
+}
+
+.signUp-input {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.signUp-input:hover{
+  cursor: pointer;
+}
+
+.errorfield {
+  color: red;
+  display: block;
+  font-size: 12px;
+}
+
+.btn-submit {
+  padding: 15px 10px;
+  background-color: #010e2a;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  width: 75%;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+::placeholder {
+  font-size: 14px;
+  font-weight: 700;
+  color: #717070;
+}
+
+.password-input-container {
+  position: relative;
+}
+
+.password-toggle {
+  text-decoration: underline;
+  position: absolute;
+  top: 32%;
+  left: 93%;
+  font-size: 11px;
+}
+
+.password-input {
+  padding: 12px 10px;
+  width: 100%;
+}
+
+.signup-field {
+  display: flex;
+  justify-content: center;
+}
+
+.button-2 {
+  background-color: #010e2a;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  width: 30vw;
+  padding: 15px 10px;
+  border: none;
+  cursor: pointer;
+  margin: 20px 60px;
+  display: block;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.sent {
+  font-size: 28px;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+.go-back {
+  text-decoration: none;
+  font: 9px;
+  font-weight: bold;
+  color: #0744d3;
+}
+
+.Next {
+  position: absolute;
+  top: 90%;
+  left: 90%;
+}
+
+.message-sent {
+  text-align: center;
+  max-width: 43vw;
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  background-color: #f0f4fc;
+}
+
+.Next a {
+  font-size: 16px;
+}
+
+.signUp-btn {
+  color: #0744d3;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.css-1aa5qj0-MuiInputBase-root-MuiInput-root {
+  width: 100%;
+}
+
+
+@media screen and (min-width: 769px) {
+  .container-main{
+    display:none;
+  }
+  .rd-container-4 {
+    position: absolute;
+    left: 35%;
+    margin-top: 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: #717070;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container1{
+    display:none;
+  }
+  .company-logo {
+    height: 40px;
+  }
+  .guy-pix {
+    width: 40%;
+    height: 28vh;
+  }
+  .form-header{
+    margin: 0 40%;
+    font-size: 25px;
+  }
+   .signUp-input1 {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }
+  .password-input1 {
+    padding: 12px 10px;
+    width: 100%;
+  }
+  .password-toggle1 {
+    text-decoration: underline;
+    position: absolute;
+    top: 32%;
+    left: 93%;
+    font-size: 11px;
+  }
+  .btn-submit1 {
+  padding: 15px 10px;
+  background-color: #010e2a;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  width: 75%;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+  .rd-container-41 {
+    position: absolute;
+    left: 35%;
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #717070;
+  }
+}
+
+@media screen, (min-width: 280px) and (max-width: 540px) {
+  .guy-pix{
+    width: 32%;
+    height: 20vh;
+  }
+  .company-logo {
+    height: 22px;
+  }
+  .form-header{
+    font-size: 20px;
+    margin: 0 35%;
+  }
+  .signUp-input1 {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }
+  .password-input1 {
+    padding: 8px 10px;
+    width: 100%;
+  }
+    .password-toggle1 {
+    text-decoration: underline;
+    position: absolute;
+    top: 25%;
+    left: 88%;
+    font-size: 5px;
+  }
+  .btn-submit1 {
+  padding: 10px 5px;
+  background-color: #010e2a;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  width: 70%;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+  .rd-container-41 {
+    position: absolute;
+    left: 25%;
+    margin-top: 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: #717070;
+  }
+}
+
+@media screen and (width: 768px){
+  .rd-container-41 {
+    position: absolute;
+    left: 40%;
+    margin-top: 0;
+    font-size: 19px;
+    font-weight: 700;
+    color: #717070;
+  }
+}
+@media screen and (width: 540px){
+  .rd-container-41 {
+    position: absolute;
+    left: 27%;
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #717070;
+  }
+}
+@media screen and (width: 820px){
+  .rd-container-4 {
+    position: absolute;
+    left: 15%;
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #717070;
+  }
+}
+@media screen and (width: 912px){
+  .rd-container-4 {
+    position: absolute;
+    left: 15%;
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #717070;
+  }
+}
+
+@media screen, (max-width: 280px) {
+  .guy-pix{
+    width: 32%;
+    height: 20vh;
+  }
+  .company-logo {
+    height: 22px;
+  }
+  .form-header{
+    font-size: 17px;
+    margin: 0 30%;
+  }
+  .signUp-input1 {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }
+  .password-input1 {
+    padding: 8px 10px;
+    width: 100%;
+  }
+  .password-toggle1 {
+    text-decoration: underline;
+    position: absolute;
+    top: 25%;
+    left: 88%;
+    font-size: 5px;
+  }
+  .btn-submit1 {
+  padding: 10px 5px;
+  background-color: #010e2a;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  width: 60%;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.rd-container-41 {
+  position: absolute;
+  left: 30%;
+  margin-top: 0;
+  font-size: 10px;
+  font-weight: 700;
+  color: #717070;
+}
+} 

@@ -1,0 +1,133 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#loan {
+  width: 100%;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  height: 100%;
+}
+thead {
+  border: 1px solid #83a1e8;
+  height: 30px;
+}
+input[type='checkbox'] {
+  accent-color: #010e2a;
+}
+
+th input,
+td input {
+  margin-left: 7px;
+}
+
+th {
+  font-size: 16px;
+  font-weight: 700;
+  color: #010e2a;
+}
+.blue-row {
+  background-color: #f0f4fc;
+}
+tr:hover {
+  background-color: #94afee;
+}
+
+td {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 0;
+  border-bottom: 10px solid white;
+}
+
+.loans-approved {
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  width: 130px;
+  padding: 8px 0;
+  border-radius: 50px;
+  background-color: #33dd64;
+  color: white;
+}
+.loans-defaulted {
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  width: 130px;
+  padding: 8px 0;
+  border-radius: 50px;
+  background-color: #dc3969;
+  color: white;
+}
+.loans-closed {
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  width: 130px;
+  padding: 8px 0;
+  border-radius: 50px;
+  background-color: #88a5ea;
+  color: white;
+}
+.loans-extended {
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  width: 130px;
+  padding: 8px 0;
+  border-radius: 50px;
+  background-color: #33dd64;
+  color: white;
+}
+
+.loans-pending {
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  width: 130px;
+  padding: 8px 0;
+  border-radius: 50px;
+  background-color: #f5c445;
+  color: white;
+}
+.loans-active {
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  width: 130px;
+  padding: 8px 0;
+  border-radius: 50px;
+  background-color: #365499;
+  color: white;
+}
+.loans-due {
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  width: 130px;
+  padding: 8px 0;
+  border-radius: 50px;
+  background-color: #f5c445;
+  color: white;
+}
+.loans-incomplete-docs {
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  width: 130px;
+  padding: 8px 0;
+  border-radius: 50px;
+  background-color: white;
+  color: black;
+}
+.loans-received-docs {
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  width: 130px;
+  padding: 8px 0;
+  border-radius: 50px;
+  background-color: #343e55;
+  color: white;
+}

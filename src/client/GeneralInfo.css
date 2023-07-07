@@ -1,0 +1,23 @@
+.personal-information-form {
+  margin: 0 auto;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  border-radius: 20px;
+}
+
+.form-settings {
+  display: flex;
+  gap: 20;
+}
+
+.personal-information-form label {
+  display: block;
+  padding-bottom: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  width: 55%;
+}
+
+.personal-information-form label select {
+  width: 70%;
+}

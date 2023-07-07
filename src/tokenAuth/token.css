@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Left div - Business guy image */
+
+.business-guy-img {
+  flex: 0 0 30%;
+}
+
+.logo {
+  margin-top: 20px;
+  height: 30px;
+}
+
+/* Right div - Token field */
+.page-content {
+  flex: 0 0 70%;
+  background-color: #f0f4fc;
+  position: relative;
+  padding: 20px 90px;
+}
+
+.token-section {
+  display: flex;
+  flex-direction: column;
+  min-width: 37%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  justify-content: center;
+}
+
+.page-prompt-hdr {
+  color: #010e2a;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.token-field-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.token-field-background {
+  background-color: white;
+  width: 50px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 4px;
+}
+
+.token-field {
+  width: 30px;
+  border: 2px solid black;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  outline: none;
+  background-color: #fffffe;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.button-div {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-token-btn {
+  color: white;
+  background-color: #010e2a;
+  width: 300px;
+  padding: 15px 0;
+  text-align: center;
+  border-radius: 5px;
+  margin: 20px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.error-message {
+  font-size: 12px;
+  text-align: center;
+  color: red;
+}
+
+/* Responsiveness */
+@media (min-width: 2000px) {
+  .token-section {
+    min-width: 50%;
+  }
+
+  .page-prompt-hdr {
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  .token-field-container {
+    /* display: flex; */
+    justify-content: space-evenly;
+    /* align-items: center; */
+    margin: 0 auto;
+    width: 60%;
+  }
+
+  .token-field-background {
+    background-color: white;
+  }
+
+  .token-field {
+    width: 30px;
+    border: 2px solid black;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    outline: none;
+    background-color: #fffffe;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .submit-token-btn {
+    margin: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  /* Left div - Business guy image */
+  .image-container {
+    width: 40%;
+  }
+
+  /* Right div - Token field */
+  .page-content {
+    width: 60%;
+    background-color: #f0f4fc;
+    position: relative;
+  }
+}
+
+@media (max-width: 550px) {
+  /* Left div - Business guy image */
+  .image-container {
+    display: none;
+  }
+
+  /* Right div - Token field */
+  .page-content {
+    width: 100%;
+  }
+
+  .logo {
+    margin: 10% 5%;
+  }
+}

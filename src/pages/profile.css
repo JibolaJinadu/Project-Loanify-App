@@ -1,0 +1,173 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.profileNavWrapper ul {
+  display: flex;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+.profileNavWrapper ul li {
+  list-style-type: none;
+}
+.profileNavWrapper .angleRight {
+  padding: 0 1rem;
+}
+
+.profileLoanWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+.loanOfficerDetails {
+  display: flex;
+}
+.loanOfficerDetails img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+
+.loanOfficerDetails div {
+  padding: 10px;
+  margin-left: 1rem;
+}
+.profilePercentageWrapper {
+  display: flex;
+  margin-top: 1rem;
+}
+.box {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1.5rem;
+  background-color: #f0f4fc;
+  padding: 1rem 0.5rem 0.5rem 1rem;
+}
+
+.box:last-child {
+  margin-right: 0;
+}
+
+.box p {
+  color: gray;
+  font-size: 12px;
+}
+.box span {
+  font-size: 12px;
+}
+.circlePercent {
+  position: absolute;
+  font-size: 14px;
+  margin-left: 5px;
+  color: black;
+}
+.box .angleUp {
+  color: rgb(70, 70, 235);
+  font-size: 12px;
+  margin-right: 2px;
+  margin-top: 3px;
+}
+.box2 .angleDown {
+  color: rgb(11, 168, 11);
+  font-size: 12px;
+  margin-right: 2px;
+  margin-top: 3px;
+}
+.box3 .angleDown {
+  color: orange;
+  font-size: 12px;
+  margin-right: 2px;
+  margin-top: 3px;
+}
+.box4 .angleDown {
+  color: rgb(211, 32, 32);
+  font-size: 12px;
+  margin-right: 2px;
+  margin-top: 3px;
+}
+.profileTableWrapper {
+  margin-top: 1rem;
+}
+.profileTableHeader {
+  text-decoration: underline;
+}
+.profileTableWrapper table {
+  margin-top: 1rem;
+  width: 100%;
+  border-collapse: collapse;
+  height: 100%;
+}
+.profileTableWrapper table thead tr {
+  border: 1px solid #83a1e8;
+  height: 40px;
+}
+.profileTableWrapper .tableData {
+  background-color: #f0f4fc;
+  border-top: 5px solid white;
+}
+.profileTableWrapper .tableData:hover {
+  background-color: #94afee;
+}
+
+.profileTableWrapper table th {
+  text-align: left;
+  padding: 0.5rem;
+  font-size: 16px;
+  font-weight: 700;
+  color: #010e2a;
+}
+.profileTableWrapper table td {
+  text-align: left;
+  padding: 2rem;
+  font-weight: 300;
+  font-size: 12px;
+}
+.profileTableWrapper table td {
+  text-align: left;
+  padding: 0.5rem;
+  font-weight: 300;
+  font-size: 12px;
+}
+.profile-name {
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.profile-sub {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .loanOfficerDetails img {
+    width: 5rem;
+    height: 5rem;
+  }
+  .loan-text h4 {
+    font-size: 14px;
+  }
+  .loan-text p {
+    font-size: 12px;
+  }
+  .edit--button {
+    margin-top: 5rem;
+  }
+  .profilePercentageWrapper {
+    flex-wrap: wrap;
+  }
+  .box {
+    width: calc(33.33%);
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .tableHead th {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .tableButton {
+    width: auto;
+    font-size: 12px;
+  }
+}

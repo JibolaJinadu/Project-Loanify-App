@@ -1,0 +1,183 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+/* @media screen and (min-width: 769px){ */
+.overview-container {
+  width: 99%;
+}
+
+.row-item1 {
+  border-bottom: 4px solid rgb(4, 41, 127);
+}
+
+.upper-text {
+  font-size: 12px;
+  padding: 0;
+  margin: 0px;
+  font-weight: 550;
+}
+
+.lower-text {
+  font-size: 18px;
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+.increase {
+  font-size: 10px;
+  margin-left: 5px;
+}
+
+.drop-up,
+.drop-down {
+  font-size: 8px;
+}
+
+.lower-text-percent {
+  margin-left: 8px;
+}
+
+.drop1,
+.right1 {
+  color: rgb(4, 41, 127);
+}
+
+.row-item2 {
+  border-bottom: 4px solid rgb(0, 212, 61);
+}
+.right2,
+.drop2 {
+  color: rgb(0, 212, 61);
+}
+
+.row-item3 {
+  border-bottom: 4px solid rgb(243, 181, 22);
+}
+.right3,
+.drop3 {
+  color: rgb(243, 181, 22);
+}
+
+.row-item4 {
+  border-bottom: 4px solid rgb(120, 154, 232);
+}
+.right4,
+.drop4 {
+  color: rgb(120, 154, 232);
+}
+
+.row-item5 {
+  border-bottom: 4px solid rgb(243, 181, 22);
+}
+.right5,
+.drop5 {
+  color: rgb(243, 181, 22);
+}
+
+.row-item6 {
+  border-bottom: 4px solid rgb(41, 127, 4);
+}
+.right6,
+.drop6 {
+  color: rgb(41, 127, 4);
+}
+
+.row-item7 {
+  border-bottom: 4px solid rgb(211, 7, 68);
+}
+.right7,
+.drop7 {
+  color: rgb(211, 7, 68);
+}
+.row-item8 {
+  border-bottom: 4px solid rgb(1, 14, 42);
+}
+.right8,
+.drop8 {
+  color: rgb(1, 14, 42);
+}
+
+.pie-label-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13%;
+  margin: 0;
+  padding: 10px;
+}
+
+.chart-label {
+  display: flex;
+  margin: 30px 3px 0 0;
+}
+
+.label-both-container{
+  max-width: 20vw;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2vw;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 2vh;
+}
+
+.label-bkg{
+  width: 17vw;
+  text-align: center;
+  padding: 0.9vh 0;
+  border-radius: 3px;
+  color: white;
+}
+
+.label-tabs {
+  background-color: rgb(243, 181, 22);
+}
+.label-tabs2 {
+  background-color: #00d43d;
+}
+.label-tabs3 {
+  background-color: #3969dc;
+}
+.label-tabs4 {
+  background-color: #dc3969;
+}
+
+
+
+.pb-50 {
+  padding-bottom: 30px;
+}
+
+.overview-3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.linechart-container {
+  width: 40%;
+  background-color: #f0f4fc;
+  margin: 3% 3%;
+  padding: 7px 5px 15px;
+  gap: 5%;
+}
+.linechart-header {
+  text-align: left;
+  font-size: 12px;
+  color: white;
+  background-color: #3969dc;
+  width: 95%;
+  margin: auto;
+  margin-top: 5px;
+  padding: 10px 14px;
+  border-radius: 5px;
+}
+
+.chart-main {
+  background-color: white;
+  margin: auto;
+  margin-top: 10px;
+}

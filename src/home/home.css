@@ -1,0 +1,18 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.building {
+  flex: 0 0 50%;
+}
+.app-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f4fc;
+  flex: 0 0 50%;
+}

@@ -1,0 +1,12 @@
+.pwd {
+  height: 77vh;
+  background-color: #f0f4fc;
+  margin: 0 20px;
+}
+.pwd-form {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}

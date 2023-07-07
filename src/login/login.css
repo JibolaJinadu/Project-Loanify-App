@@ -1,0 +1,131 @@
+/* Login CSS */
+
+a {
+  text-decoration: none;
+}
+
+.login {
+  display: flex;
+  height: 100vh;
+}
+
+.login img {
+  flex: 0 0 30%;
+}
+
+.form-wrapper {
+  height: 100%;
+  padding: 20px 90px;
+  flex: 0 0 70%;
+  background-color: #f0f4fc;
+}
+
+.form-wrapper img {
+  margin-top: 20px;
+  height: 30px;
+}
+
+.form {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group {
+  width: 50%;
+}
+
+.form-group input {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px 10px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.pass {
+  color: #010e2a;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 5px;
+  text-align: right;
+  display: block;
+}
+
+.btn {
+  cursor: pointer;
+  display: block;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.btn-blue {
+  background-color: #010e2a;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.sign {
+  color: #0744d3;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.team {
+  color: #717070;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.login-password {
+  margin-left: -30px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .login {
+    flex-direction: column;
+    background-color: #f0f4fc;
+  }
+
+  .form-wrapper {
+    height: 100%;
+  }
+
+  .login-img {
+    display: none;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+}

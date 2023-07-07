@@ -1,0 +1,160 @@
+@media only screen and (min-width: 600px){
+.profileImage {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+caseId {
+  color: #297F04;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.tel-no {
+  font-size: 14px;
+}
+
+.flex {
+  display: flex;
+  gap: 15rem;
+  margin: 0 20px;
+  padding-bottom: 20px;
+}
+.profile-flex {
+  display: flex;
+  gap: 20px;
+}
+.loan-type {
+  display: flex;
+  gap: 10px;
+}
+.loan-contact {
+  display: flex;
+}
+.highlighted-client {
+  background-color: #f0f4fc;
+  width: 400px;
+  padding: 2px;
+  padding: 10px 20px;
+}
+
+.btn-container {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 30px;
+}
+.active-btn {
+  background-color: #00d43d;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 0.2rem;
+  margin-top: 11px;
+}
+.approve {
+  width: 110px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 0.2rem;
+}
+.decline {
+  width: 110px;
+  height: 40px;
+  color: white;
+  background-color: #d30744;
+  border: none;
+  border-radius: 0.2rem;
+}
+}
+
+
+
+
+
+
+/* Small device*/
+@media only screen and (max-width: 768px){
+  .flex {
+    width: 300px;
+    display: flex;
+    gap: 9px;
+    margin: 0 20px;
+    padding-bottom: 20px;
+
+    
+    }
+  
+  .profileImage {
+    height: 37.5px;
+    width: 37.5px;
+    border-radius: 50%;
+  }
+  
+  caseId {
+    color: #297F04;
+    font-size: 8px;
+    font-weight: 700;
+  }
+  
+  .tel-no {
+    font-size: 8px;
+  }
+
+.flex p {
+  font-size: 8px;
+}
+
+.flex h3 {
+  font-size: 10px;
+}
+
+.profile-icon {
+  width: 8px;
+}
+
+.profile-flex {
+  display: flex;
+  gap: 1px;
+}
+.loan-type {
+  display: flex;
+}
+
+.highlighted-client {
+  background-color: #f0f4fc;
+  width: 150px;
+  padding: 10px 5px;
+}
+
+.loan-contact {
+  display: flex;
+}
+
+.active-btn {
+  background-color: #00d43d;
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 0.1rem;
+  margin-top: 11px;
+}
+.approve {
+  width: 110px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 0.2rem;
+}
+.decline {
+  width: 110px;
+  height: 40px;
+  color: white;
+  background-color: #d30744;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+}
+
+

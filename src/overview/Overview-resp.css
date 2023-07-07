@@ -1,0 +1,266 @@
+@media screen and (min-width: 769px) {
+  .overview-row1 {
+    display: flex;
+    gap: 7%;
+    margin: 20px;
+  }
+  .row-item1,
+  .row-item2,
+  .row-item3,
+  .row-item4,
+  .row-item5,
+  .row-item6,
+  .row-item7,
+  .row-item8 {
+    display: flex;
+    flex-basis: 28%;
+    padding: 15px 3px;
+    margin: 5px 0px 10px;
+  }
+  .item-right {
+    flex-basis: 30%;
+    font-weight: lighter;
+    font-size: 27px;
+  }
+
+  .item-left {
+    flex-basis: 70%;
+    text-align: start;
+    padding-left: 15px;
+    margin: 0 4px;
+  }
+
+  .pie-header {
+    text-align: center;
+    margin: 10px auto;
+    width: 22%;
+    background-color: #3969dc;
+    padding: 10px;
+    color: white;
+    border-radius: 6px;
+    font-size: 12px;
+  }
+  .overview-2 {
+    border: 1px solid rgb(111, 173, 217, 0.5);
+    border-radius: 5px;
+    margin: 20px;
+    padding-top: 20px;
+  }
+  /* .recharts-surface {
+    width: 320px;
+  } */
+}
+
+@media screen and (min-width: 540px) and (max-width: 768px) {
+  .row-item1,
+  .row-item2,
+  .row-item3,
+  .row-item4,
+  .row-item5,
+  .row-item6,
+  .row-item7,
+  .row-item8 {
+    margin: 10px auto;
+    display: flex;
+    gap: 5%;
+    width: 45%;
+    padding: 20px 3px;
+  }
+  .overview-row1 {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px auto;
+    gap: 10%;
+  }
+  .item-right {
+    flex-basis: 30%;
+    font-weight: lighter;
+    font-size: 27px;
+  }
+
+  .item-left {
+    flex-basis: 70%;
+    text-align: start;
+    padding-left: 15px;
+    margin: 0 4px;
+    font-size: large;
+  }
+  .drop-up,
+  .drop-down {
+    font-size: 11px;
+  }
+  .upper-text {
+    font-size: 15px;
+    padding: 0;
+    margin: 0px;
+    font-weight: 550;
+  }
+  .increase {
+    font-size: 14px;
+    margin-left: 5px;
+  }
+
+  /*overview2 responsiveness*/
+  .label-tabs,
+  .label-tabs2,
+  .label-tabs3,
+  .label-tabs4 {
+    margin-bottom: 20px;
+    padding: 10px 60px;
+    color: white;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+  .label-percentage {
+    margin: 0 0 14px 0px;
+    padding: 10px 10px;
+    font-size: 15px;
+  }
+
+  .pie-header {
+    text-align: center;
+    margin: 5px auto;
+    width: 40%;
+    background-color: #3969dc;
+    padding: 10px;
+    color: white;
+    border-radius: 6px;
+    font-size: 12px;
+  }
+
+  /*overview3 responsiveness*/
+  .linechart-container {
+    width: 45%;
+    background-color: #f0f4fc;
+    margin: 3%;
+    padding: 7px 5px 15px;
+    gap: 5%;
+  }
+  .linechart-header {
+    text-align: left;
+    font-size: 14px;
+    color: white;
+    background-color: #3969dc;
+    width: 95%;
+    margin: auto;
+    margin-top: 5px;
+    padding: 10px 14px;
+    border-radius: 5px;
+  }
+  .recharts-surface {
+    width: 320px;
+  }
+}
+
+@media screen and (max-width: 539px) {
+  .overview-row1 {
+    width: 280px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 10px auto;
+  }
+  .row-item1,
+  .row-item2,
+  .row-item3,
+  .row-item4,
+  .row-item5,
+  .row-item6,
+  .row-item7,
+  .row-item8 {
+    margin: 10px 0;
+    display: flex;
+    width: 95%;
+    padding: 20px 3px;
+  }
+
+  /*overview2 responsiveness*/
+  .overview-2 {
+    margin: 20px 0;
+  }
+  .pie-label-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+    margin: 0;
+  }
+  .pie-header {
+    text-align: center;
+    margin: 5px auto 0;
+    width: 60%;
+    background-color: #3969dc;
+    padding: 10px;
+    color: white;
+    border-radius: 6px;
+    font-size: 12px;
+  }
+
+  .label-tabs,
+  .label-tabs2,
+  .label-tabs3,
+  .label-tabs4 {
+    margin-bottom: 20px;
+    padding: 10px 50px;
+    color: white;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+  .label-percentage {
+    margin: 0 0 14px 0px;
+    padding: 10px 10px;
+    font-size: 15px;
+  }
+  .item-right {
+    flex-basis: 30%;
+    font-weight: lighter;
+    font-size: 27px;
+  }
+
+  .item-left {
+    flex-basis: 70%;
+    text-align: start;
+    padding-left: 15px;
+    font-size: large;
+  }
+  .drop-up,
+  .drop-down {
+    font-size: 11px;
+  }
+  .upper-text {
+    font-size: 17px;
+    padding: 0;
+    margin: 0px;
+    font-weight: 550;
+  }
+  .increase {
+    font-size: 14px;
+    margin-left: 5px;
+  }
+
+  /*overview3 responsiveness*/
+  .overview-3 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .linechart-container {
+    width: 275px;
+    background-color: #f0f4fc;
+    margin: 3%;
+    padding: 7px 5px 15px;
+  }
+  .linechart-header {
+    text-align: left;
+    font-size: 14px;
+    color: white;
+    background-color: #3969dc;
+    width: 90%;
+    margin: 5px auto;
+    padding: 10px 14px;
+    border-radius: 5px;
+  }
+  .recharts-surface {
+    width: 260px;
+  }
+}
