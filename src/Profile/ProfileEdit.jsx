@@ -10,6 +10,7 @@ import './ProfileStyles.css';
 
 export default function ProfileEdit() {
   const { loginToken, setLoginToken } = useContext(AuthContext);
+
   const [getData, setGetData] = useState('');
   const [profileData, setProfileData] = useState({
     firstName: '',
@@ -44,7 +45,6 @@ export default function ProfileEdit() {
         martialStatus: response.data.data.martialStatus,
         role: response.data.data.role,
       });
-      // toast.success('Profile gotten');
     } catch (error) {
       console.log(error);
       toast.error("Couldn't fetch profile data!");
@@ -54,8 +54,6 @@ export default function ProfileEdit() {
   useEffect(() => {
     GetProfile();
   }, []);
-
-  const fullName = `${profileData.firstName} ${profileData.lastName}`;
 
   const [update, setUpdate] = useState({
     firstName: profileData.firstName,
@@ -86,7 +84,7 @@ export default function ProfileEdit() {
 
   return (
     <section className="">
-      <ProfileHeader role={profileData.role} fullName={fullName} />
+      <ProfileHeader />
       <div className="">
         <form action="" className="">
           <h3 className="">Personal Information</h3>

@@ -3,20 +3,20 @@ import ProfileBig from './ProfileBig';
 import './ProfileStyles.css';
 import { AuthContext } from '../AuthContext';
 
-const ProfileHighLight = ({ role, fullName }) => {
-  const { isActive } = useContext(AuthContext);
+const ProfileHighLight = () => {
+  const { isActive, firstName, lastName, userRole } = useContext(AuthContext);
 
   return (
     <div className="dev">
       <div>
-        <ProfileBig bold={fullName} />
+        <ProfileBig bold={`${firstName} ${lastName}`} />
       </div>
       <div className="move">
         <div>
-          <ProfileBig tiny={'role:'} />
+          <ProfileBig tiny={'role: '} />
         </div>
         <div>
-          <ProfileBig tiny={role} />
+          <ProfileBig tiny={`${userRole}`} />
         </div>
       </div>
       <div className="move">

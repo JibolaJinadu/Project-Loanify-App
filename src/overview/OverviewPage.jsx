@@ -15,13 +15,13 @@ import { AuthContext } from '../AuthContext';
 const OverviewPage = () => {
   const [loading, setLoading] = useState(true);
   const { loginToken } = React.useContext(AuthContext);
-  const [allLoans, setAllLoans] = useState();
-  const [loansApproved, setLoansApproved] = useState();
-  const [loansPending, setLoansPending] = useState();
-  const [loansDue, setLoansDue] = useState();
-  const [loansClosed, setLoansClosed] = useState();
-  const [loansExtended, setLoansExtended] = useState();
-  const [loansDefaulted, setLoansDefaulted] = useState();
+  const [allLoans, setAllLoans] = useState(0);
+  const [loansApproved, setLoansApproved] = useState(0);
+  const [loansPending, setLoansPending] = useState(0);
+  const [loansDue, setLoansDue] = useState(0);
+  const [loansClosed, setLoansClosed] = useState(0);
+  const [loansExtended, setLoansExtended] = useState(0);
+  const [loansDefaulted, setLoansDefaulted] = useState(0);
   useEffect(() => {
     const fetchData = async () => {
       if (loginToken) {
@@ -57,18 +57,20 @@ const OverviewPage = () => {
     fetchData();
   }, [loginToken]);
 
-  // function getClosedPercent() {
-  //   const close =
-  //     (loansClosed /
-  //       (loansClosed + loansDefaulted + loansApproved + loansPending)) *
-  //     360;
-  //   console.log(close);
-  //   console.log('close');
-  // }
+  function getLoanPercent(loanValue) {
+    if (loanValue === 0) {
+      return 0;
+    }
+    return (
+      (loanValue /
+        (loansClosed + loansDefaulted + loansApproved + loansPending)) *
+      100
+    );
+  }
 
-  // useEffect(() => {
-  //   getClosedPercent();
-  // }, []);
+  useEffect(() => {
+    getLoanPercent();
+  }, [loansClosed, loansDefaulted, loansApproved, loansPending]);
 
   return (
     <>
@@ -210,19 +212,19 @@ const OverviewPage = () => {
             <div>
               <div className="label-both-container">
                 <div className="label-tabs label-bkg">Pending Loans</div>
-                <div>{loansPending}%</div>
+                <div>{getLoanPercent(loansPending)}%</div>
               </div>
               <div className="label-both-container">
                 <div className="label-tabs2 label-bkg">Approved Loans</div>
-                <div>{loansApproved}%</div>
+                <div>{getLoanPercent(loansApproved)}%</div>
               </div>
               <div className="label-both-container">
-                <div className="label-tabs3 label-bkg">Defaulted Loans</div>
-                <div>{loansDefaulted}%</div>
+                <div className="label-tabs4 label-bkg">Defaulted Loans</div>
+                <div>{getLoanPercent(loansDefaulted)}%</div>
               </div>
               <div className="label-both-container">
-                <div className="label-tabs4 label-bkg">Closed Loans</div>
-                <div>{loansClosed}%</div>
+                <div className="label-tabs3 label-bkg">Closed Loans</div>
+                <div>{getLoanPercent(loansClosed)}%</div>
               </div>
             </div>
           </div>

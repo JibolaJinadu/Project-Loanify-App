@@ -15,6 +15,23 @@
   width: 30px;
 }
 
+.avatar-box {
+  font-size: 16px;
+  font-weight: 700;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  border: 0.5px solid #0744d3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
 .sidebar-logo {
   height: 30px;
 }

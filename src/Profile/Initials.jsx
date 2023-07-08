@@ -5,15 +5,15 @@ function Initials(props) {
     width: '7rem',
     height: '7rem',
     borderRadius: '50%',
-    background: '#0744d3',
-    color: 'white',
     position: 'relative',
+    border: '0.5px solid #0744d3',
   };
 
   const textStyle = {
     fontSize: '30px',
     textAlign: 'center',
     paddingTop: '2rem',
+    fontWeight: '700',
   };
 
   return (

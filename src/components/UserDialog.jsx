@@ -15,6 +15,8 @@ import avatar from './assets/Avatar.png';
 import { Link } from 'react-router-dom';
 import jane from './assets/jane.png';
 import './sidebar.css';
+import { AuthContext } from '../AuthContext';
+import CircleIcon from '@mui/icons-material/Circle';
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
@@ -62,6 +64,8 @@ BootstrapDialogTitle.propTypes = {
 };
 
 export default function UserDialog() {
+  const { imageSrc, firstName, lastName, isActive } =
+    React.useContext(AuthContext);
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -74,7 +78,27 @@ export default function UserDialog() {
   return (
     <div>
       <button className="icon-btn" onClick={handleClickOpen}>
-        <img src={avatar} alt="" style={{ height: '24px' }} />
+        <div style={{ display: 'flex', alignItems: 'flex-end' }}>
+          {imageSrc ? (
+            <img
+              src={imageSrc}
+              alt="Profile"
+              style={{ width: '24px', height: '24px', borderRadius: '50%' }}
+            />
+          ) : (
+            <div className="avatar-box">
+              {`${firstName.charAt(0)}${lastName.charAt(0)}`}
+            </div>
+          )}
+          <CircleIcon
+            sx={{
+              color: isActive ? '#297F04' : '#D30744',
+              height: '10px',
+              width: '10px',
+              marginLeft: '-5px',
+            }}
+          />
+        </div>
       </button>
       <BootstrapDialog
         onClose={handleClose}

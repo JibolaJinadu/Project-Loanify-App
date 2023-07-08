@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './login.css';
 import businessGuy from './img/business guy.png';
 import logo from './img/LOANIFY logo.svg';
@@ -11,7 +11,13 @@ import { AuthContext } from '../AuthContext';
 import { CircularProgress } from '@mui/material';
 
 function Login() {
-  const { loginToken, setLoginToken } = useContext(AuthContext);
+  const {
+    loginToken,
+    setLoginToken,
+    updateFirstName,
+    updateLastName,
+    updateUserRole,
+  } = useContext(AuthContext);
 
   const [formData, setFormData] = useState({
     email: '',
@@ -53,6 +59,33 @@ function Login() {
       setIsLoading(false);
     }
   };
+
+  const GetProfile = async () => {
+    try {
+      const response = await axios.get(
+        `https://loanifyteama-production.up.railway.app/api/v1/users/me`,
+        {
+          headers: {
+            Authorization: `Bearer ${loginToken}`,
+          },
+        }
+      );
+      Cookies.set('firstName', response.data.data.firstName, { expires: 7 });
+      Cookies.set('lastName', response.data.data.lastName, { expires: 7 });
+      Cookies.set('userRole', response.data.data.role, { expires: 7 });
+      updateUserRole(response.data.data.role);
+      updateLastName(response.data.data.lastName);
+      updateFirstName(response.data.data.firstName);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    if (loginToken) {
+      GetProfile();
+    }
+  }, [loginToken]);
 
   function handleSubmit(e) {
     e.preventDefault();

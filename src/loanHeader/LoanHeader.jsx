@@ -3,6 +3,7 @@ import ClientDialog from '../client/ClientDialog';
 import SearchIcon from '@mui/icons-material/Search';
 import './LoanHeader.css';
 import { Dialog } from '@mui/material';
+import FilterModal from '../components/FilterModal';
 
 const LoanHeader = ({
   table,
@@ -29,24 +30,10 @@ const LoanHeader = ({
             onChange={handleSearch}
           />
         </div>
-        <div className="search-filter">
-          <select
-            className="filter-select"
-            value={filterStatus}
-            onChange={handleFilterStatus}
-          >
-            <option value="">All</option>
-            <option value="Approved">Approved</option>
-            <option value="Incomplete Docs">Incomplete Docs</option>
-            <option value="Received Docs">Received Docs</option>
-            <option value="Pending">Pending</option>
-            <option value="Active">Active</option>
-            <option value="Due">Due</option>
-            <option value="Extended">Extended</option>
-            <option value="Defaulted">Defaulted</option>
-            <option value="Closed">Closed</option>
-          </select>
-        </div>
+        <FilterModal
+          filterStatus={filterStatus}
+          handleFilterStatus={handleFilterStatus}
+        />
       </div>
       <div className="loan-print">
         <button className="print" onClick={handlePrint}>

@@ -12,6 +12,7 @@ import ClientDialog from './ClientDialog';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../AuthContext';
+import ClientModal from './ClientModal';
 
 const Client = () => {
   const { loginToken, setLoginToken } = useContext(AuthContext);
@@ -153,19 +154,10 @@ const Client = () => {
                   onChange={handleSearch}
                 />
               </div>
-              <div className="search-filter">
-                <select
-                  className="filter-select"
-                  value={filterStatus}
-                  onChange={handleFilterStatus}
-                >
-                  <option value="">All</option>
-                  <option value="Approved">Approved</option>
-                  <option value="Due">Due</option>
-                  <option value="Declined">Declined</option>
-                  <option value="Closed">Closed</option>
-                </select>
-              </div>
+              <ClientModal
+                filterStatus={filterStatus}
+                handleFilterStatus={handleFilterStatus}
+              />
             </div>
 
             <div className="search-print">
