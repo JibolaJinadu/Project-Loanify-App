@@ -1,15 +1,21 @@
+.general {
+  width: 100%;
+  padding-bottom: 2.5px;
+  padding-top: 2.5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+}
+
 .general h5 {
   font-size: 18px;
-  padding-left: 10px;
 }
 
 .personal-information-form {
-  margin: 0 auto;
-  padding: 10px;
   font-family: Arial, sans-serif;
 }
 
-.form-settings {
+.personal-form-settings {
   display: flex;
   justify-content: space-between;
 }
@@ -23,13 +29,14 @@
 .personal-information-form label {
   font-size: 13px;
   font-weight: small;
-  color: #7a7979;
+  color: #7A7979;
 }
 
 .label-settings input {
+  padding-left: 5px;
+  width: 200px;
   height: 40px;
-  /* width: 250px; */
-  border-radius: 0.4rem;
+  border-radius: 0.3rem;
   border: 1px solid #83a1e8;
 }
 
@@ -44,10 +51,11 @@
 }
 
 .address-settings input {
-  /* width: 775px; */
+  width: 625px;
   height: 40px;
   border-radius: 0.4rem;
   border: 1px solid #83a1e8;
+  
 }
 
 .address-settings label {
@@ -66,6 +74,11 @@
   padding: 5px;
 }
 
+.client-padding {
+  padding-bottom: 20px;
+}
+
+
 @media (max-width: 600px) {
   .general h5 {
     font-size: 10px;
@@ -81,7 +94,7 @@
   .personal-information-form label {
     font-size: 9px;
     font-weight: small;
-    color: #7a7979;
+    color: #7A7979;
   }
 
   .label-settings input {
@@ -90,6 +103,7 @@
     border-radius: 0.2rem;
     border: 1px solid #83a1e8;
   }
+
   .address-settings input {
     width: 225px;
     height: 20px;

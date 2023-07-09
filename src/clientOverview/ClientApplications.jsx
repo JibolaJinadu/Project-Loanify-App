@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './ClientApplications.css';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { HiChevronDown } from 'react-icons/hi2';
 import LoanApp from './LoanApp';
 import CollateralInformation from './CollateralInformation';
 

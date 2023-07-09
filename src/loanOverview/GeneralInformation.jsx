@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './GeneralInformation.css';
+import './GeneralInformation.css' ;
+
 
 const GeneralInformation = () => {
   const [firstName, setFirstName] = useState('');
@@ -150,29 +151,33 @@ const GeneralInformation = () => {
   return (
     <div className="general">
       <h5>Personal Information</h5>
-      <form className="personal-info-form" onSubmit={{ handleSubmit }}>
-        <div className="form-settings">
-          <div className="grid-column">
-            <label>
-              First Name
+      <div className='client-padding'></div>
+
+      <form className="personal-information-form" onSubmit={{ handleSubmit }}>
+        <div className="personal-form-settings">
+          <div>
+            <div className='label-settings'>
+              <label>First Name</label>
               <input
                 type="text"
                 value={firstName}
                 placeholder="Temidayo"
                 onChange={handleFirstNameChange}
               ></input>
-            </label>
-            <label>
-              Sex
+            </div>
+
+            <div className='label-settings'>
+              <label>Sex</label>
               <input
                 type="text"
                 value={gender}
                 placeholder="Female"
                 onChange={handleGenderChange}
               ></input>
-            </label>
-            <label>
-              Email Address
+            </div>
+
+            <div className='label-settings'>
+            <label>Email Address</label>
               <input
                 type="text"
                 value={emailAddress}
@@ -180,115 +185,191 @@ const GeneralInformation = () => {
                 onChange={handleEmailAddressChange}
                 required
               ></input>
-            </label>
-            <div className='address-setting'>
-            <label>
-              Address
-              <input
-                type="text"
-                name="address"
-                value={homeAddress}
-                placeholder="Olowoporoku Close Gbagada Estate,Lagos"
-                onChange={handleHomeAddressChange}
-              />
-            </label>
             </div>
           </div>
-          <div className="grid-column">
-            <label>
-              Middle Name
+
+          <div>
+            <div className='label-settings'>
+            <label>Middle Name</label>
               <input
                 type="text"
                 value={middleName}
-                placeholder="Janet"
+                placeholder="Middle Name(optional)"
                 onChange={handleMiddleNameChange}
               ></input>
-            </label>
-            <label>
-              Date of Birth
+            </div>
+
+            <div className='label-settings'>
+            <label>Date of Birth</label>
               <input
                 type="text"
                 value={dateOfBirth}
                 placeholder="04/12/1975"
                 onChange={handleDateOfBirthChange}
               ></input>
-            </label>
-            <label>
-              Phone Number
+            </div>
+
+            <div className='label-settings'>
+            <label>Phone Number</label>
               <input
                 type="text"
                 value={phoneNumber}
                 placeholder="09055555558"
                 onChange={handlePhoneNumberChange}
               ></input>
-            </label>
+            </div>
           </div>
-          <div className="grid-column">
-            <label>
-              Last Name
+
+
+          <div>
+            <div className='label-settings'>
+            <label>Last Name</label>
               <input
                 type="text"
                 value={lastName}
                 placeholder="Adebayo"
                 onChange={handleLastNameChange}
+
               />
-            </label>
-            <label>
-              Marital Status
+            </div>
+
+            <div className='label-settings'>
+            <label>Marital Status</label>
               <input
                 type="text"
                 value={maritalStatus}
                 placeholder="Married"
                 onChange={handleMaritalStatusChange}
+
               ></input>
-            </label>
-            <label>
-              NIN
+            </div>
+
+            <div className='label-settings'>
+            <label>NIN</label>
               <input
                 type="text"
                 value={nin}
                 placeholder="237569103853"
                 onChange={handleNinChange}
+
               />
-            </label>
-            <div className='address-setting'>
-            <label>
-              Tenancy Start Date
+            </div>
+          </div>
+        </div>
+      </form>
+
+
+      <form className='personal-information-form' onSubmit={{ handleSubmit }}>
+        <div className='personal-form-settings'>
+        <div className='address-settings'>
+            <label>Address</label>
+              <input
+                type="text"
+                name="address"
+                value={homeAddress}
+                placeholder="Olowoporoku Close Gbagada Estate,Lagos"
+                onChange={handleHomeAddressChange}
+
+              />
+        </div>
+        <div className='label-settings'>
+            <label>Tenancy Start Date</label>
               <input
                 type="text"
                 value={date}
                 placeholder="02/01/2015"
                 onChange={handleDateChange}
+
               />
-            </label>
             </div>
-          </div>
         </div>
       </form>
+      <div className='client-padding'></div>
+
       <h5>Employment Information</h5>
-      <form className="employment-info-form" onSubmit={{ handleSubmit }}>
-        <div className="form-settings">
+      <div className='client-padding'></div>
+
+      <form  className="personal-information-form" onSubmit={{ handleSubmit }}>
+        <div className="personal-form-settings">
           <div>
-            <label>
-              Place of Work
+            <div className='label-settings'>
+              <label>Place of Work</label>
               <input
                 type="text"
                 value={work}
                 placeholder="Nigerian Aviation"
                 onChange={handleWorkChange}
+
               ></input>
-            </label>
-            <label>
-              Company Staff Number
+            </div>
+
+            <div className='label-settings'>
+              <label>Company Staff Number</label>
               <input
                 type="text"
                 value={number}
                 placeholder="NGA7890"
                 onChange={handleNumberChange}
+
               ></input>
-            </label>
-            <label>
-              Company Physical Address
+            </div>
+          </div>
+
+          <div>
+            <div className='label-settings'>
+              <label>Job Title</label>
+              <input
+                type="text"
+                value={jobTitle}
+                placeholder="Air Hostess"
+                onChange={handleJobTitleChange}
+
+              ></input>
+            </div>
+
+            <div className='label-settings'>
+            <label>Start Date</label>
+            <input
+                type="text"
+                value={date}
+                placeholder="04/05/2013"
+                onChange={handleDateChange}
+
+              />
+            </div>
+          </div>
+
+
+          <div>
+            <div className='label-settings'>
+            <label> Work Email</label>
+              <input
+                type="text"
+                value={workEmail}
+                placeholder="atemiday@ngair.org.ng"
+                onChange={handleWorkEmailChange}
+                required
+
+              ></input>
+            </div>
+
+            <div className='label-settings'>
+            <label> End Date </label>
+              <input
+                type="text"
+                value={endDate}
+                placeholder="N/A"
+                onChange={handleEndDateChange}
+              />
+            </div>
+          </div>
+        </div>
+      </form>
+
+
+      <form className='personal-information-form' onSubmit={{ handleSubmit }}>
+      <div className='address-settings'>
+              <label> Company Physical Address</label>
               <input
                 type="text"
                 name="address"
@@ -296,138 +377,123 @@ const GeneralInformation = () => {
                 placeholder="SANCO Complex, MMA2 Ikeja, Lagos"
                 onChange={handlePhysicalAddressChange}
                 required
+
               ></input>
-            </label>
-          </div>
-          <div>
-            <label>
-              Job Title
-              <input
-                type="text"
-                value={jobTitle}
-                placeholder="Air Hostess"
-                onChange={handleJobTitleChange}
-              ></input>
-            </label>
-            <label>
-              Start Date
-              <input
-                type="text"
-                value={date}
-                placeholder="04/05/2013"
-                onChange={handleDateChange}
-              />
-            </label>
-          </div>
-          <div>
-            <label>
-              Work Email
-              <input
-                type="text"
-                value={workEmail}
-                placeholder="atemiday@ngair.org.ng"
-                onChange={handleWorkEmailChange}
-                required
-              ></input>
-            </label>
-            <label>
-              End Date
-              <input
-                type="text"
-                value={endDate}
-                placeholder="N/A"
-                onChange={handleEndDateChange}
-              />
-            </label>
-          </div>
-        </div>
+            </div>
       </form>
+      <div className='client-padding'></div>
+
+
+      <div>
       <h5>Guarantor Information</h5>
-      <form className="guarantor-info-form" onSubmit={{ handleSubmit }}>
-        <div className="form-settings">
+      <div className='client-padding'></div>
+
+      <form  className="personal-information-form" onSubmit={{ handleSubmit }}>
+        <div className="personal-form-settings">
           <div>
-            <label>
-              Full Name
+            <div className='label-settings'>
+            <label>Full Name </label>
               <input
                 type="text"
                 value={fullName}
                 placeholder="Solomon Adebayo"
                 onChange={handleFullNameChange}
+
               />
-            </label>
-            <label>
-              Phone Number
+            </div>
+
+            <div className='label-settings'>
+            <label>Phone Number</label>
               <input
                 type="text"
                 value={phoneNumber}
                 placeholder="09055555558"
                 onChange={handlePhoneNumberChange}
+
               ></input>
-            </label>
-            <label>
-              Place of Work
-              <input
-                type="text"
-                value={placeofwork}
-                placeholder="Greene Logistics"
-                onChange={handlePlaceOfWorkChange}
-              ></input>
-            </label>
+            </div>
           </div>
+
+
           <div>
-            <label>
-              Employment Status
+            <div className='label-settings'>
+            <label>Employment Status </label>
               <input
                 type="text"
                 value={employmentStatus}
                 placeholder="Employed"
                 onChange={handleEmploymentStatusChange}
+                className='information-input'
               ></input>
-            </label>
-            <label>
-              Date of Birth
+            </div>
+
+            <div className='label-settings'>
+            <label>Date of Birth</label>
               <input
                 type="text"
                 value={birthDate}
                 placeholder="12/04/2000"
                 onChange={handleBirthDateChange}
+
               ></input>
-            </label>
-            <label>
-              Work Address
-              <input
-                type="text"
-                name="address"
-                value={address}
-                placeholder="12, Herbert Marculay Way, Ikoyi, Lagos"
-                onChange={handleAddressChange}
-                required
-              ></input>
-            </label>
+            </div>
           </div>
+
           <div>
-            <label>
-              Email Address
+            <div className='label-settings'>
+            <label>Email Address</label>
               <input
                 type="text"
                 value={email}
                 placeholder="temidayo.bayo@gmail.com"
                 onChange={handleEmailChange}
                 required
+
               ></input>
-            </label>
-            <label>
-              NIN
+            </div>
+
+            <div className='label-settings'>
+            <label>NIN</label>
               <input
                 type="text"
                 value={nin}
                 placeholder="237569103853"
                 onChange={handleNinChange}
               />
-            </label>
+            </div>
           </div>
         </div>
       </form>
+      </div>
+
+    
+        <form>
+          <div className='personal-form-settings'>
+          <div  className='label-settings'>
+            <label>Place of Work</label>
+              <input
+                type="text"
+                value={placeofwork}
+                placeholder="Greene Logistics"
+                onChange={handlePlaceOfWorkChange}
+                required
+              ></input>
+        </div>
+
+        <div className='address-settings'>
+            <label>Work Address</label>
+              <input
+                type="text"
+                value={address}
+                placeholder="12, Herbert Marculay Way, Ikoyi, Lagos"
+                onChange={handleAddressChange}
+
+              ></input>
+            </div>
+          </div>
+        
+        </form>
+     
     </div>
   );
 };

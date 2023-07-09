@@ -1,41 +1,50 @@
-.risk-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
-}
-
-.risk-scoreClient,
-.risk-grade {
-  padding-top: 40px;
-}
-
-.risk-space {
-  padding-left: 20px;
-}
-
-.risk-scoreClient p {
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.risk-grade p {
-  font-size: 14px;
-}
-
-.comment-container {
+.risk-text {
   display: flex;
 }
 
-.risk-comment {
-  font-size: 14px;
-  font-weight: 700;
+.risk-grade {
+  padding-left: 100px;
 }
-.risk-highlighted {
-  background-color: #f0f4fc;
-  width: 500px;
-  height: 80px;
-  border-radius: 0.5rem;
+.risk-grades {
+  padding-left: 92px;
 }
 
-.risk-feedback {
+.risk-image {
+  padding-left: 225px;
+}
+
+.risk-good h4 {
+  padding-bottom: 18px;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.risk-grade p {
+  padding-bottom: 18px;
+  font-size: 14px;
+}
+
+.decision-text {
+  padding-top: 20px;
+}
+
+.decision-comments h4 {
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.decision-recommendation {
+  background-color: #f0f4fc;
+  width: 475px;
+  height: 120px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.decision-recommendation p {
+  padding: 5px;
+}
+
+.riskComment {
   font-size: 14px;
 }

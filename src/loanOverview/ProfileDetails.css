@@ -44,6 +44,7 @@
   background-color: white;
   border: 1px solid #83a1e8;
   border-radius: 0.2rem;
+  cursor: pointer;
 }
 .decline {
   width: 110px;

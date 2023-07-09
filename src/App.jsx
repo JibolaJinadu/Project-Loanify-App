@@ -29,11 +29,9 @@ import { useEffect, useState } from 'react';
 import { AuthProvider } from './AuthContext';
 import Cookies from 'js-cookie';
 import LoanContract from './loanOverview/LoanContract';
-import ClientContractForm from './clientOverview/ClientContractForm';
 import ProfileEdit from './Profile/ProfileEdit';
 import LoanOverview from './loanOverview/LoanOverview';
-// import ClientContract from './clientOverview/ClientContract';
-
+import ClientContract from './clientOverview/ClientContract';
 function App() {
   //
 
@@ -97,7 +95,7 @@ function App() {
           <Route path="/clients" element={<Client />}></Route>
           <Route
             path="/clients/clients-overview/contract"
-            element={<ClientContractForm />}
+            element={<ClientContract />}
           ></Route>
           <Route path="/profile" element={<ProfilePage />}></Route>
           <Route path="/reports" element={<Reports />}></Route>

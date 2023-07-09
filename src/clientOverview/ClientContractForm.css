@@ -1,65 +1,28 @@
-.client-container {
+.loan-wrap {
   display: flex;
 }
-.client-contract {
-  display: flex;
-  flex-direction: column;
-  line-height: 5rem;
-  margin-left: 20px;
+.loan-contract {
+    display: flex;
+    flex-direction: column;
+    line-height: 5rem;
+    margin-left: 20px;
 }
-
-.print-button {
-  display: flex;
-  gap:1rem;
+.flex-wrap {
+    display: flex;
+    gap:1rem;
 }
-
-.print-btn {
-  width: 80px;
-  height: 40px;
-  font-size: small;
-  cursor: pointer;
-  background-color: white;
-  color: black;
-  border: 1px solid #c1d0f4;
-  border-radius: 8px;
-  /*font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  padding: 10px 20px;
-  background-color: white;
-  color: black;
-  border: 1px solid lightgrey;
-  border-radius: 8px;*/
-}
-
-/*.return-button {
-  padding-top: 10px;
-  padding-left: 15px;
-}*/
-.return-btn {
-  width: 150px;
-  height: 40px;
-  font-size: small;
-  cursor: pointer;
-  background-color: #0744d3;
-  margin-top: 30px;
-  margin-left: 30px;
-  color: #fff;
-  border: none;
-  outline: none;
+.print {
+    width: 80px;
+    height: 40px;
+    font-size: small;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 1px solid #c1d0f4;
     border-radius: 8px;
-  /*font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  padding: 10px 20px;
-  background-color: blue;
-  color: white;
-  border: 1px solid blue;
-  border-radius: 8px;*/
-}
-
-.edit-btn {
-  width: 110px;
+  }
+  .edit-doc {
+    width: 110px;
     height: 40px;
     font-size: small;
     cursor: pointer;
@@ -69,41 +32,44 @@
     border: none;
     outline: none;
     border-radius: 8px;
-  /*margin-left: 10px;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  padding: 10px 20px;
-  background-color: blue;
-  color: white;
-  border: 1px solid blue;
-  border-radius: 8px;*/
+  }
+  .return {
+    width: 150px;
+    height: 40px;
+    font-size: small;
+    cursor: pointer;
+    background-color: #0744d3;
+    margin-top: 30px;
+    margin-left: 30px;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+  }
+  .form-text {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
 }
 
-.contract-container {
-  border: 30px double #F0F4FC;
-  background-color: #F0F4FC;
-  line-height: 1.6rem;
+.white-background{
+    background-color: white;
+    border: 15px solid #f0f4fc;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 14px;
+    width: 735px;
+    margin-top: 20px;
 }
 
-.form-text {
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  outline: none;
+.white-background h4 {
+  padding-top: 20px;
 }
-
-.white-background {
-  background-color: white;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  font-size: 14px;
-}
-
 .data-input {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 /*Extra small devices (phones, 600px and down)*/
 @media only screen and (max-width: 600px){

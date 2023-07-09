@@ -1,55 +1,50 @@
-.risk-score {
+.risk-text {
   display: flex;
-  padding-top: 10px;
 }
 
-.risk-comment{
-  font-size: 14px;
-  font-weight: 700;
+.risk-grade {
+  padding-left: 100px;
 }
-.rs-highlighted {
+.risk-grades {
+  padding-left: 92px;
+}
+
+.risk-image {
+  padding-left: 225px;
+}
+
+.risk-good h4 {
+  padding-bottom: 18px;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.risk-grade p {
+  padding-bottom: 18px;
+  font-size: 14px;
+}
+
+.decision-text {
+  padding-top: 20px;
+}
+
+.decision-comments h4 {
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.decision-recommendation {
   background-color: #f0f4fc;
-  width: 320px;
-  height: 80px;
-  padding: 4px;
-  border-radius: 0.5rem;
+  width: 470px;
+  height: 120px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.decision-recommendation p {
+  padding: 5px;
 }
 
 .riskComment {
   font-size: 14px;
-}
-
-.rs-sizeb p {
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.rs-size p {
-  font-size: 14px;
-}
-.rs-space{
-  margin-right: 55px;
-}
-
-.risk-space {
-  margin-right: 80px;
-}
-/*Extra small devices (phones, 600px and down)*/
-@media only screen and (max-width: 600px){
-  .risk-score {border: 30px double white;}
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up)*/
-@media only screen and (min-width: 600px){
-  .risk-score {border: 30px double white}
-}
-
-/*Medium devices (landscape tablets, 768px and up)*/
-@media only screen and (min-width: 768px){
-  .risk-score {border: 30px double white}
-}
-
-/*Extra large devices(large laptops and desktops, 1200px and up)*/
-@media only screen and (min-width: 1200px){
-  .risk-score {border: 30px double white;}
 }

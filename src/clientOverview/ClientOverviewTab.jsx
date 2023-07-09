@@ -11,7 +11,8 @@ import Documents from './Documents';
 import ProfileDetails from './ProfileDetails';
 import ClientApplications from './ClientApplications';
 
-const ClientOverviewTab = ({ onTabChange }) => {
+
+const LoanOverviewTab = ({ onTabChange }) => {
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('sm'));
 
@@ -128,24 +129,16 @@ const ClientOverviewTab = ({ onTabChange }) => {
         ></div>
       </Tabs>
       <TabPanel value={value} index={1}>
-        <Typography>
-          <GeneralInformation />
-        </Typography>
+        <GeneralInformation />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <Typography>
-          <ClientApplications />
-        </Typography>
+        <ClientApplications />
       </TabPanel>
       <TabPanel value={value} index={3}>
-        <Typography>
-          <RiskScore />
-        </Typography>
+        <RiskScore />
       </TabPanel>
       <TabPanel value={value} index={4}>
-        <Typography>
-          <Documents />
-        </Typography>
+        <Documents />
       </TabPanel>
     </Box>
   );
@@ -162,9 +155,9 @@ function TabPanel(props) {
       id={`tabpanel-${index}`}
       aria-labelledby={`tab-${index}`}
     >
-      {value === index && <Box p={3}>{children}</Box>}
+      {value === index && <Box p={2.5}>{children}</Box>}
     </Typography>
   );
 }
 
-export default ClientOverviewTab;
+export default LoanOverviewTab;

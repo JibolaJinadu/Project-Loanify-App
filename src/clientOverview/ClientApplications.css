@@ -11,7 +11,7 @@
   padding-right: 10px;
   background-color: white;
   text-align: left;
-  border: 1px solid #83a1e8;
+  border: 1px solid  #83a1e8;
 }
 
 .appCheckbox {
@@ -33,12 +33,12 @@
   grid-template-columns: 1fr 1fr;
 }
 
-@media only screen and (min-width: 1200px) {
   .details,
   .details-title {
-    border: 1px solid #83a1e8;
+    border: 1px solid  #83a1e8;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 50px;
     height: 50px;
     padding-right: 10px;
     padding-top: 2.5px;
@@ -49,11 +49,11 @@
 
   .details p {
     font-weight: 900;
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .details-title h5 {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   #case-number {
@@ -68,8 +68,8 @@
 
   .progress,
   .progressBar {
-    width: 10rem;
-    height: 1.5rem;
+    width: 8rem;
+    height: 1.7rem;
     border-radius: 1.2rem;
     background-color: rgb(243, 243, 243);
   }
@@ -85,7 +85,7 @@
   }
   .textName {
     color: white;
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
     display: block;
     padding-top: 5px;
@@ -102,8 +102,8 @@
 
   .progress-one,
   .progress-bar {
-    width: 10rem;
-    height: 1.5rem;
+    width: 8rem;
+    height: 1.7rem;
     border-radius: 1.2rem;
     background-color: rgb(243, 243, 243);
   }
@@ -126,7 +126,7 @@
       width: 90%;
     }
   }
-}
+
 
 .collateralInformation {
   display: grid;
@@ -143,9 +143,7 @@
   padding: 5px;
 }
 
-.client-container {
-  display: flex;
-}
+
 .client-contract {
   display: flex;
   flex-direction: column;
@@ -222,10 +220,10 @@
   margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .details,
   .details-title {
-    border: 1px solid #83a1e8;
+    border: 1px solid  #83a1e8;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 3px;
@@ -318,290 +316,3 @@
   }
 }
 
-@media only screen and (min-width: 600px) {
-  .details,
-  .details-title {
-    border: 1px solid #83a1e8;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 20px;
-    height: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 2.5px;
-    padding-bottom: 2.5px;
-    align-items: center;
-  }
-
-  .details p {
-    font-weight: 900;
-    font-size: 12px;
-  }
-
-  .details-title h5 {
-    font-size: 14px;
-  }
-
-  #case-number {
-    font-weight: lighter;
-  }
-
-  .barContainer {
-    min-height: 100vh;
-    width: 100vw;
-    align-items: center;
-  }
-
-  .progress,
-  .progressBar {
-    width: 8rem;
-    height: 1.5rem;
-    border-radius: 1.2rem;
-    background-color: rgb(243, 243, 243);
-  }
-
-  .progressBar {
-    background-color: green;
-    animation: backp 3s;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    border-radius: 1rem;
-    box-shadow: none;
-  }
-  .textName {
-    color: white;
-    font-size: 14px;
-    text-align: center;
-    display: block;
-    padding-top: 5px;
-  }
-
-  @keyframes backp {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 100%;
-    }
-  }
-
-  .progress-one,
-  .progress-bar {
-    width: 8rem;
-    height: 1.5rem;
-    border-radius: 1.2rem;
-    background-color: rgb(243, 243, 243);
-  }
-
-  .progress-bar {
-    background-color: black;
-    animation: loader 3s;
-    margin: 0;
-    padding: 0;
-    width: 90%;
-    border-radius: 1rem;
-    box-shadow: none;
-  }
-
-  @keyframes loader {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 90%;
-    }
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .details,
-  .details-title {
-    border: 1px solid #83a1e8;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
-    height: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 2.5px;
-    padding-bottom: 2.5px;
-    align-items: center;
-  }
-
-  .details p {
-    font-weight: 900;
-    font-size: 14px;
-  }
-
-  .details-title h5 {
-    font-size: 16px;
-  }
-
-  #case-number {
-    font-weight: lighter;
-  }
-
-  .barContainer {
-    min-height: 100vh;
-    width: 100vw;
-    align-items: center;
-  }
-
-  .progress,
-  .progressBar {
-    width: 8rem;
-    height: 1.5rem;
-    border-radius: 1.2rem;
-    background-color: rgb(243, 243, 243);
-  }
-
-  .progressBar {
-    background-color: green;
-    animation: backp 3s;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    border-radius: 1rem;
-    box-shadow: none;
-  }
-  .textName {
-    color: white;
-    font-size: 14px;
-    text-align: center;
-    display: block;
-    padding-top: 5px;
-  }
-
-  @keyframes backp {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 100%;
-    }
-  }
-
-  .progress-one,
-  .progress-bar {
-    width: 8rem;
-    height: 1.5rem;
-    border-radius: 1.2rem;
-    background-color: rgb(243, 243, 243);
-  }
-
-  .progress-bar {
-    background-color: black;
-    animation: loader 3s;
-    margin: 0;
-    padding: 0;
-    width: 90%;
-    border-radius: 1rem;
-    box-shadow: none;
-  }
-
-  @keyframes loader {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 90%;
-    }
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .details,
-  .details-title {
-    border: 1px solid #83a1e8;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    height: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 2.5px;
-    padding-bottom: 2.5px;
-    background-color: #fff;
-    align-items: center;
-  }
-
-  .details p {
-    font-weight: 900;
-    font-size: 12px;
-  }
-
-  .details-title h5 {
-    font-size: 14px;
-  }
-
-  #case-number {
-    font-weight: lighter;
-  }
-
-  .barContainer {
-    min-height: 100vh;
-    width: 100vw;
-    align-items: center;
-  }
-
-  .progress,
-  .progressBar {
-    width: 8rem;
-    height: 1.5rem;
-    border-radius: 1.2rem;
-    background-color: rgb(243, 243, 243);
-  }
-
-  .progressBar {
-    background-color: green;
-    animation: backp 3s;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    border-radius: 1rem;
-    box-shadow: none;
-  }
-  .textName {
-    color: white;
-    font-size: 14px;
-    text-align: center;
-    display: block;
-    padding-top: 5px;
-  }
-
-  @keyframes backp {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 100%;
-    }
-  }
-
-  .progress-one,
-  .progress-bar {
-    width: 8rem;
-    height: 1.5rem;
-    border-radius: 1.2rem;
-    background-color: rgb(243, 243, 243);
-  }
-
-  .progress-bar {
-    background-color: black;
-    animation: loader 3s;
-    margin: 0;
-    padding: 0;
-    width: 90%;
-    border-radius: 1rem;
-    box-shadow: none;
-  }
-
-  @keyframes loader {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 90%;
-    }
-  }
-}

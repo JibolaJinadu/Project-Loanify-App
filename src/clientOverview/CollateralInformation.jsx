@@ -8,6 +8,7 @@ const CollateralInformation = () => {
     const [yearOfPurchase, setYearOfPurchase] = useState('');
     const [currentMarketValue, setCurrentMarketValue] = useState('');
     const [modelColor, setModelColor] = useState('');
+    const [proofOfOwnership, setProofOfOwnership] = useState('');
     
     const handleCollateralTypeChange = (event) => {
       setCollateralType(event.target.value);
@@ -27,6 +28,10 @@ const CollateralInformation = () => {
     const handleCurrentMarketValueChange = (event) => {
       setCurrentMarketValue(event.target.value);
     };
+    const handleProofOfOwnership = (event) => {
+      setProofOfOwnership(event.target.value);
+    };
+      
   
     const handleSubmits = (event) => {
         event.preventDefault();
@@ -38,6 +43,7 @@ const CollateralInformation = () => {
           yearOfPurchase,
           currentMarketValue,
           modelColor,
+          proofOfOwnership,
           );
     
           setCollateralType('');
@@ -46,80 +52,87 @@ const CollateralInformation = () => {
         setYearOfPurchase('');
         setCurrentMarketValue('');
         setModelColor('');
+        setProofOfOwnership('');
       };
 
   return (
-    <div>
-                <form className="loan-app-form">
-            <div className="form-settings spaced-up">
+    <div className='clientsPadding'>
+      <form onSubmit={{ handleSubmits }}>
+        <div className='client-container'>
             <div>
-            <label>
-                Collateral Type <br />
+              <div className='label-settings'>
+              <label>Collateral Type</label>
               <input
                 type="text"
                 value={collateralType}
                 placeholder="Vehicle"
                 onChange={handleCollateralTypeChange}
               ></input>
-            </label>
-            <label>
-                Year Of Purchase <br />
+              </div>
+            
+               <div className='label-settings'>
+              <label>Year Of Purchase</label>
               <input
                 type="text"
                 value={yearOfPurchase}
                 placeholder="2019"
                 onChange={handleYearOfPurchaseChange}
               ></input>
-            </label>
             </div>
+            </div>
+
             <div>
-            <label>
-                Collateral Name <br />
+              <div className='label-settings'>
+              <label>Collateral Name</label>
               <input
                 type="text"
                 value={collateralName}
                 placeholder="NGN 450,000"
                 onChange={handleCollateralName}
               ></input>
-            </label>
-            <label>
-                Current Market Value <br />
+              </div>
+
+              <div className='label-settings'>
+              <label> Current Market Value</label>
               <input
                 type="text"
                 value={currentMarketValue}
                 placeholder="NGN 450,000"
                 onChange={handleCurrentMarketValueChange}
               ></input>
-            </label>
-            <div className='ownership-proof'>
-          
-            <label htmlFor="Submit">
-            <a  className='proof' href="http://">Proof of ownership</a>
-            </label>
-            </div>
-            </div>
+            
+              </div>
+            
+              <div className='ownership-proof'>
+             <button type="submit" className='proof-button'>Proof of Ownership</button>
+             </div>
+             </div>
+
+
             <div>
-            <label>
-                Model No <br />
+              <div  className='label-settings'>
+              <label>Model No </label>
               <input
                 type="text"
                 value={modelNo}
                 placeholder="E210"
                 onChange={handleModelNoChange}
               ></input>
-            </label>
-            <label>
-                Model Color <br />
+              </div>
+
+              <div className='label-settings'>
+              <label>Model Color </label>
               <input
                 type="text"
                 value={modelColor}
                 placeholder="Silver"
                 onChange={handleModelColorChange}
               ></input>
-            </label>
-            </div>
+              </div>
+           
             </div>
             
+            </div>
         </form>
     </div>
   )

@@ -17,6 +17,7 @@ function Login() {
     updateFirstName,
     updateLastName,
     updateUserRole,
+    updateUserEmail,
   } = useContext(AuthContext);
 
   const [formData, setFormData] = useState({
@@ -73,9 +74,11 @@ function Login() {
       Cookies.set('firstName', response.data.data.firstName, { expires: 7 });
       Cookies.set('lastName', response.data.data.lastName, { expires: 7 });
       Cookies.set('userRole', response.data.data.role, { expires: 7 });
+      Cookies.set('userEmail', response.data.data.email, { expires: 7 });
       updateUserRole(response.data.data.role);
       updateLastName(response.data.data.lastName);
       updateFirstName(response.data.data.firstName);
+      updateUserEmail(response.data.data.email);
     } catch (error) {
       console.log(error);
     }

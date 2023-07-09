@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Box from '@mui/material/Box';
 import './Support.css';
 import Sidebar from '../components/Sidebar';
@@ -11,27 +11,28 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 const SupportPage = () => {
-  const [showTextarea, setShowTextarea] = useState(false);
+  const [showTextArea, setShowTextArea] = useState(false);
   const [textareaValue, setTextareaValue] = useState('');
-  const [submissionMessage, setSubmissionMessage] = useState('');
+  const [showSubmissionMessage, setShowSubmissionMessage] = useState(false);
 
-  const handleButtonClick = () => {
-    setShowTextarea(!showTextarea);
-    setSubmissionMessage('');
-  };
-
-  const handleTextareaChange = (event) => {
-    setTextareaValue(event.target.value);
-  };
-
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
-    setSubmissionMessage('Issue Sent');
+  const handleClick = () => {
+    setShowTextArea(!showTextArea);
     setTextareaValue('');
+    setShowSubmissionMessage(false);
   };
 
-  const handleClose = () => {
-    setSubmissionMessage('');
+  const handleChange = (e) => {
+    setTextareaValue(e.target.value);
+  };
+
+  const handleSend = () => {
+    if (textareaValue.trim() === '') {
+      // Prevent submission of empty message
+      return;
+    }
+
+    setShowSubmissionMessage(true);
+    setShowTextArea(false);
   };
 
   return (
@@ -44,10 +45,10 @@ const SupportPage = () => {
             <Breadcrumbs
               separator={<ChevronRightIcon />}
               aria-label="breadcrumb"
+              className="breadcrumbs1"
               sx={{
                 backgroundColor: '#F0F4FC',
-                width: '94%',
-                margin: '0 20px 10px',
+                margin: '0 20px 10px 20px',
                 padding: '10px 5px',
               }}
             >
@@ -59,79 +60,94 @@ const SupportPage = () => {
           </div>
 
           <div className="overall">
-            <div className="section-2a">
-              <Link to="/support/faq" className="faq-link">
+            <div className="FAQ-session support-session">
+              <Link to="/support/faq" className="FAQ-content">
                 FAQ
               </Link>
             </div>
 
-            <div className="section-3">
+            <div className="Toll-session support-session">
               <div>
-                <p className="section-3-p1">Toll-free call</p>
-                <p className="section-3-p2">
-                  Talk to a Support Officer at any time
-                </p>
+                <p className="toll-p1">Toll-free call</p>
+                <p className="toll-p2">Talk to a Support Officer at any time</p>
               </div>
-              <button className="toll-btn">080 0000 1234</button>
+              <button className="toll-bttn">
+                <a href="tel:080 0000 1234" className="toll-bttn1">
+                  080 0000 1234
+                </a>
+              </button>
             </div>
 
-            <div className='section-4'>
-            <Button
-                onClick={handleButtonClick}
-                className="report-final-sub1"
-                style={{
-                  color: 'black',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  marginTop: '1.5%',
-                }}
+            <div>
+              <button
+                onClick={handleClick}
+                className="support-session report-bttn"
               >
-                <p className="report-drp-p1">Report an Issue</p>
-                <FontAwesomeIcon className="report-drp-p2" icon={faChevronDown} />
-              </Button>
-              {showTextarea && (
-                <form className="report-form-cover" onSubmit={handleFormSubmit}>
+                <div className="report-bttn-text">
+                  <p>{showTextArea ? 'Report an Issue' : 'Report an Issue'}</p>
+                  <p>
+                    <FontAwesomeIcon
+                      className="report-drpdwn"
+                      icon={faChevronDown}
+                    />
+                  </p>
+                </div>
+              </button>
+              {showTextArea && (
+                <div style={{ marginTop: '3px', position: 'relative' }}>
                   <textarea
-                    value={textareaValue}
-                    onChange={handleTextareaChange}
                     className="report-textarea"
-                  ></textarea>
-                  <Button
-                    className="report-final-sub"
                     style={{
+                      minHeight: '30vh',
+                      padding: '1vw',
+                      outline: 'none',
+                    }}
+                    placeholder="Enter your message here"
+                    value={textareaValue}
+                    onChange={handleChange}
+                  />
+                  <button
+                    onClick={handleSend}
+                    className="report-send-button"
+                    style={{
+                      position: 'absolute',
+                      bottom: '15px',
+                      right: '2px',
+                      padding: '1vh 2vw',
                       backgroundColor: '#0744d3',
                       color: 'white',
-                      fontSize: '10px',
+                      borderRadius: '5px',
                     }}
-                    type="submit"
                   >
                     Send
-                  </Button>
-                </form>
+                  </button>
+                </div>
               )}
-              <Dialog open={submissionMessage !== ''} onClose={handleClose}>
-                <DialogTitle
-                  className='dialog-title'
+              {showSubmissionMessage && (
+                <div
                   style={{
-                    color: 'green',
-                    fontSize: '50px',
-                    padding: '50px 120px 0px',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    height: '30vh',
                   }}
                 >
-                  <FontAwesomeIcon className="check-icon" icon={faCheck} />
-                </DialogTitle>
-                <DialogContent
-                  className='dialog-content'
-                  style={{
-                    fontSize: '15px',
-                    fontWeight: 'bolder',
-                    padding: '0px 100px 50px',
-                  }}
-                >
-                  {submissionMessage}
-                </DialogContent>
-              </Dialog>
+                  <div
+                    className="submission-mssg"
+                    style={{
+                      width: '20vw',
+                      height: '15vw',
+                      background: 'lightgray',
+                      borderRadius: '8px',
+                      padding: '40px 16px 0',
+                      textAlign: 'center',
+                    }}
+                  >
+                    <FontAwesomeIcon className="check-icon" icon={faCheck} />
+                    <p>Submission successful!</p>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </Box>

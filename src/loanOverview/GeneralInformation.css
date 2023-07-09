@@ -1,126 +1,120 @@
-.personal-info-form, .employment-info-form, .guarantor-info-form {
-  display: flex;
-  flex-wrap: wrap;
-}
-.personal-info-form {
-  margin: 0 auto;
-  padding: 10px;
-  font-family: Arial, sans-serif;
-  
-}
-
-.form-settings {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 115px;
-  margin-bottom: 20px;
-  line-height: 30px;
-}
-.grid-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.personal-info-form label {
-  display: block;
-  padding-bottom: 10px;
-  font-size: 13px;
-  font-weight: small;
-  width: 60%;
-  color: #7a7979;
-}
-.personal-info-form input {
-  width: 250px;
-  height: 40px;
-  padding: 10px;
-  border-radius: 0.5rem;
-  border: 1px solid #83a1e8;
-}
-/* .address-setting {
-  display: flex;
-  flex-direction: column;
-  padding-top: 20px;
-}
-.personal-info-form input[name='address'] {
-  width: 350px;
-  height: 40px;
-
-} */
-.employment-info-form {
-  margin: 0 auto;
-  padding: 10px;
-  font-family: Arial, sans-serif;
-}
-.employment-info-form label {
-  display: block;
-  padding-bottom: 10px;
-  font-size: 13px;
-  font-weight: small;
-  width: 70%;
-  color: #7a7979;
-}
-.employment-info-form input {
-  width: 250px;
-  height: 40px;
-  padding: 10px;
-  border-radius: 0.5rem;
-  border: 1px solid #83a1e8;
-}
-/* .employment-information-form input[name='address'] {
-  width: 350px;
-} */
-.guarantor-info-form {
-  margin: 0 auto;
-  padding: 10px;
-  font-family: Arial, sans-serif;
-}
-.guarantor-info-form label {
-  display: block;
-  padding-bottom: 10px;
-  font-size: 13px;
-  font-weight: small;
-  width: 60%;
-  color: #7a7979;
-}
-.guarantor-info-form input {
-  width: 250px;
-  height: 40px;
-  padding:10px;
-  border-radius: 0.5rem;
-  border: 1px solid #83a1e8;
-}
-/* .guarantor-information-form input[name='address'] {
-  width: 350px;
-} */
-::placeholder {
-  color: black;
-  font-weight: lighter;
-  padding: 10px;
+.general {
+  width: 100%;
+  padding-bottom: 2.5px;
+  padding-top: 2.5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
 }
 
 .general h5 {
   font-size: 18px;
 }
 
-@media (max-width:600px) {
-.form-settings {
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-    gap: 10px;
-    }
-.grid-column {
+.personal-information-form {
+  font-family: Arial, sans-serif;
+}
+
+.personal-form-settings {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label-settings {
   display: flex;
   flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.personal-information-form label {
+  font-size: 13px;
+  font-weight: small;
+  color: #7A7979;
+}
+
+.label-settings input {
+  padding-left: 5px;
+  width: 200px;
+  height: 40px;
+  border-radius: 0.3rem;
+  border: 1px solid #83a1e8;
+}
+
+.label-settings label {
+  padding-bottom: 5px;
+}
+
+.address-settings {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.address-settings input {
+  width: 625px;
+  height: 40px;
+  border-radius: 0.4rem;
+  border: 1px solid #83a1e8;
   
 }
-.personal-info-form label, .employment-info-form label, .guarantor-info-form label {
-  display: block;
-  width: 300px;
-}
-.personal-info-form input, .employment-info-form input, .guarantor-info-form input {
-  width: 300px;
 
-}
+.address-settings label {
+  padding-bottom: 5px;
 }
 
+.information-input {
+  color: black;
+  font-weight: lighter;
+  padding: 10px;
+}
+
+::placeholder {
+  color: black;
+  font-weight: lighter;
+  padding: 5px;
+}
+
+.client-padding {
+  padding-bottom: 20px;
+}
+
+
+@media (max-width: 600px) {
+  .general h5 {
+    font-size: 10px;
+    padding-left: 5px;
+  }
+
+  .personal-information-form {
+    margin: 0 auto;
+    padding: 5px;
+    font-family: Arial, sans-serif;
+  }
+
+  .personal-information-form label {
+    font-size: 9px;
+    font-weight: small;
+    color: #7A7979;
+  }
+
+  .label-settings input {
+    height: 20px;
+    width: 78px;
+    border-radius: 0.2rem;
+    border: 1px solid #83a1e8;
+  }
+
+  .address-settings input {
+    width: 225px;
+    height: 20px;
+    border-radius: 0.2rem;
+    border: 1px solid #83a1e8;
+  }
+
+  ::placeholder {
+    color: black;
+    font-weight: lighter;
+    font-size: 9px;
+    padding: 5px;
+  }
+}

@@ -11,6 +11,7 @@ export const AuthProvider = ({ children }) => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [userRole, setUserRole] = useState('');
+  const [userEmail, setuserEmail] = useState('');
 
   useEffect(() => {
     const storedToken = Cookies.get('signUpToken');
@@ -18,6 +19,7 @@ export const AuthProvider = ({ children }) => {
     const storedFirstName = Cookies.get('firstName');
     const storedLastName = Cookies.get('lastName');
     const storedRole = Cookies.get('userRole');
+    const storedEmail = Cookies.get('userEmail');
 
     if (storedToken) {
       setSignUpToken(storedToken);
@@ -33,6 +35,9 @@ export const AuthProvider = ({ children }) => {
     }
     if (storedRole) {
       setUserRole(storedRole);
+    }
+    if (storedEmail) {
+      setuserEmail(storedEmail);
     }
   }, []);
 
@@ -59,6 +64,9 @@ export const AuthProvider = ({ children }) => {
   const updateUserRole = (newRole) => {
     setUserRole(newRole);
   };
+  const updateUserEmail = (newEmail) => {
+    setuserEmail(newEmail);
+  };
 
   const authContextValue = {
     isActive,
@@ -76,6 +84,8 @@ export const AuthProvider = ({ children }) => {
     updateLastName,
     userRole,
     updateUserRole,
+    updateUserEmail,
+    userEmail,
   };
 
   return (

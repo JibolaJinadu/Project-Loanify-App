@@ -1,8 +1,11 @@
+import { useContext } from 'react';
 import { Toggle } from './Toggle';
 import './security.css';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../AuthContext';
 
 function Security() {
+  const { userEmail } = useContext(AuthContext);
   const logState = (state) => {
     console.log('Toggled:', state);
   };
@@ -18,7 +21,7 @@ function Security() {
           {/* <Link href="#" className="s-btn btn--blue btn--right">
             Edit
           </Link> */}
-          <p>jamesbond@gmail.com</p>
+          <p>{userEmail}</p>
         </div>
       </div>
       <div className="card">
