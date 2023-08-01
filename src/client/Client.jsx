@@ -19,6 +19,7 @@ const Client = () => {
   const [tableData, setTableData] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [filterStatus, setFilterStatus] = useState('');
+  const [filteredData, setFilteredData] = useState([]);
 
   const handleSearch = (event) => {
     setSearchQuery(event.target.value);
@@ -27,25 +28,6 @@ const Client = () => {
   const handleFilterStatus = (event) => {
     setFilterStatus(event.target.value);
   };
-
-  const filteredTableData = (data) => {
-    return data.filter((row) => {
-      const fullName = row.lender?.fullName?.toLowerCase();
-      const loanStatus = row.status?.toLowerCase();
-      const applicationNumber = row.castNumber?.toLowerCase();
-
-      return (
-        (fullName &&
-          searchQuery &&
-          fullName.startsWith(searchQuery.toLowerCase())) ||
-        (applicationNumber &&
-          searchQuery &&
-          applicationNumber.startsWith(searchQuery.toLowerCase()))
-      );
-    });
-  };
-
-  const filteredData = filteredTableData(tableData);
 
   const handlePrint = () => {
     window.print();
@@ -89,12 +71,9 @@ const Client = () => {
             },
           }
         );
-        console.log(response.data.data); // Check the type of response.data
         setTableData(response.data.data);
-        // toast.success('Profile Update!');
       } catch (error) {
         console.log(error);
-        // toast.error("Couldn't update profile data!");
       }
     }
   };
@@ -102,6 +81,27 @@ const Client = () => {
   useEffect(() => {
     GetClients();
   }, []);
+
+  const filterData = (data, searchQuery, filterStatus) => {
+    return data.filter((row) => {
+      const firstName = row.lender.firstName.toLowerCase();
+      const lastName = row.lender.lastName.toLowerCase();
+      const loanStatus = row.status.toLowerCase();
+      const applicationNumber = row.castNumber.toLowerCase();
+
+      return (
+        (firstName.includes(searchQuery.toLowerCase()) ||
+          lastName.includes(searchQuery.toLowerCase()) ||
+          applicationNumber.includes(searchQuery.toLowerCase())) &&
+        (filterStatus === '' || loanStatus === filterStatus.toLowerCase())
+      );
+    });
+  };
+
+  useEffect(() => {
+    const filters = filterData(tableData, searchQuery, filterStatus);
+    setFilteredData(filters);
+  }, [tableData, searchQuery, filterStatus]);
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -171,11 +171,7 @@ const Client = () => {
             <thead>
               <tr id="clients-row">
                 <th>
-                  <input
-                    type="checkBox"
-                    className="clients-input"
-                    disabled
-                  ></input>
+                  <input type="checkBox" className="clients-input"></input>
                 </th>
                 <th>Application Number</th>
                 <th id="client-name">Full Name</th>
@@ -183,12 +179,59 @@ const Client = () => {
                 <th>Date</th>
               </tr>
             </thead>
+            {/* <tr >
+              <td colSpan={5} style={{ textAlign: 'center', height: '0' }}>
+                &nbsp;
+              </td>
+            </tr> */}
             <tr className="padtap">&nbsp;</tr>
             <tbody id="client-data">
-              {tableData.map((row, index) => {
+              {filteredData.length === 0 ? (
+                <tr>
+                  <td colSpan={5} style={{ textAlign: 'left' }}>
+                    No data available
+                  </td>
+                </tr>
+              ) : (
+                filteredData.map((row, index) => {
+                  const fullName =
+                    `${row.lender?.firstName} ${row.lender?.lastName}` ?? '';
+                  return (
+                    <tr
+                      className="client-row"
+                      key={index}
+                      onClick={handleRowClick}
+                    >
+                      <td>
+                        <Link to="/clients/clients-overview">
+                          <input
+                            type="checkbox"
+                            className="clients-input"
+                          ></input>
+                        </Link>
+                      </td>
+                      <td>{row.castNumber}</td>
+                      <td>{fullName}</td>
+                      <td>
+                        <button
+                          className={` ${getStatusColor(
+                            row.status.toLowerCase()
+                          )}`}
+                        >
+                          {formatStatus(row.status)}
+                        </button>{' '}
+                      </td>
+                      <td>{formatDate(row.lender.createdAt)}</td>
+                    </tr>
+                  );
+                })
+              )}
+            </tbody>
+
+            {/* <tbody id="client-data">
+              {filteredData.map((row, index) => {
                 const fullName =
                   `${row.lender?.firstName} ${row.lender?.lastName}` ?? '';
-                console.log('fullName');
                 return (
                   <tr
                     className="client-row"
@@ -219,7 +262,7 @@ const Client = () => {
                   </tr>
                 );
               })}
-            </tbody>
+            </tbody> */}
           </table>
         </div>
       </Box>

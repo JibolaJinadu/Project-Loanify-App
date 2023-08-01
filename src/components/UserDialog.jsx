@@ -104,6 +104,11 @@ export default function UserDialog() {
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}
+        sx={{
+          '& .MuiBackdrop-root': {
+            backgroundColor: 'transparent',
+          },
+        }}
       >
         <BootstrapDialogTitle
           id="customized-dialog-title"

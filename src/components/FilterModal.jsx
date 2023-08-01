@@ -7,16 +7,10 @@ import FilterAltOutlinedIcon from '@mui/icons-material/FilterAltOutlined';
 
 const style = {
   position: 'absolute',
-  top: '47%',
+  top: '33%',
   left: '55%',
   transform: 'translate(-50%, -50%)',
-  width: 180,
-  height: 230,
-  bgcolor: 'background.paper',
-  border: 'none',
-  boxShadow: 0,
   borderRadius: '8px',
-  p: 0,
 };
 
 export default function FilterModal({ filterStatus, handleFilterStatus }) {
@@ -26,7 +20,12 @@ export default function FilterModal({ filterStatus, handleFilterStatus }) {
 
   return (
     <div>
-      <Button onClick={handleOpen} sx={{ border: '0.5px solid #83a1e8' }}>
+      <Button
+        onClick={handleOpen}
+        sx={{
+          border: '0.5px solid #83a1e8',
+        }}
+      >
         <span style={{ color: 'black', textTransform: 'none' }}>Filter</span>
         <FilterAltOutlinedIcon />
       </Button>
@@ -35,6 +34,11 @@ export default function FilterModal({ filterStatus, handleFilterStatus }) {
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        sx={{
+          '& .MuiBackdrop-root': {
+            backgroundColor: 'transparent',
+          },
+        }}
       >
         <Box sx={style}>
           <div className="search-filter">
@@ -42,8 +46,15 @@ export default function FilterModal({ filterStatus, handleFilterStatus }) {
               className="filter-select"
               value={filterStatus}
               onChange={handleFilterStatus}
+              style={{
+                width: '100%',
+                boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
+                cursor: 'pointer',
+              }}
             >
-              <option value="">All</option>
+              <option value="" style={{ width: '100%' }}>
+                All
+              </option>
               <option value="Approved">Approved</option>
               <option value="Incomplete Docs">Incomplete Docs</option>
               <option value="Received Docs">Received Docs</option>

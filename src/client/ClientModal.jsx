@@ -7,12 +7,9 @@ import FilterAltOutlinedIcon from '@mui/icons-material/FilterAltOutlined';
 
 const style = {
   position: 'absolute',
-  top: '40%',
-  left: '55%',
+  top: '33%',
+  left: '53%',
   transform: 'translate(-50%, -50%)',
-  width: 135,
-  height: 150,
-  bgcolor: 'background.paper',
   border: 'none',
   borderRadius: '8px',
   boxShadow: 0,
@@ -35,6 +32,11 @@ export default function ClientModal({ filterStatus, handleFilterStatus }) {
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        sx={{
+          '& .MuiBackdrop-root': {
+            backgroundColor: 'transparent',
+          },
+        }}
       >
         <Box sx={style}>
           <div className="search-filter">
@@ -42,11 +44,18 @@ export default function ClientModal({ filterStatus, handleFilterStatus }) {
               className="filter-select"
               value={filterStatus}
               onChange={handleFilterStatus}
+              style={{
+                width: '100%',
+                boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
+                cursor: 'pointer',
+              }}
             >
               <option value="">All</option>
               <option value="Approved">Approved</option>
               <option value="Due">Due</option>
               <option value="Declined">Declined</option>
+              <option value="Extended">Extended</option>
+              <option value="Defaulted">Defaulted</option>
               <option value="Closed">Closed</option>
             </select>
           </div>

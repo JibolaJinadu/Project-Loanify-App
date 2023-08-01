@@ -5,10 +5,6 @@ import { Link, useNavigate } from 'react-router-dom';
 const LoanTable = ({ tableData, table }) => {
   const navigate = useNavigate();
 
-  const handleRowClick = () => {
-    navigate('/loans/loans-overview');
-  };
-
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     const day = String(date.getDate()).padStart(2, '0');
@@ -59,6 +55,10 @@ const LoanTable = ({ tableData, table }) => {
     return <div>No data available</div>;
   }
 
+  const handleRowClick = (row) => {
+    navigate('/loans/loans-overview', { state: { userInfo: row } });
+  };
+
   return (
     <div className="loan-container">
       <table ref={table} id="loan">
@@ -78,7 +78,11 @@ const LoanTable = ({ tableData, table }) => {
         <tr className="padtap">&nbsp;</tr>
         <tbody>
           {tableData.map((row, index) => (
-            <tr className="blue-row" key={row.id} onClick={handleRowClick}>
+            <tr
+              className="blue-row"
+              key={row.id}
+              onClick={() => handleRowClick(row)}
+            >
               <td>
                 <input type="checkBox"></input>
               </td>

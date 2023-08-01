@@ -1,7 +1,7 @@
 .flex {
   display: flex;
   align-items: center;
-  gap: 15rem;
+  justify-content: space-between;
   margin: 0 20px;
   padding-bottom: 20px;
 }
@@ -21,7 +21,7 @@
 }
 .highlighted {
   /* background-color: #f0f4fc; */
-  width: 318px;
+  width: 400px;
   padding: 2px;
 }
 

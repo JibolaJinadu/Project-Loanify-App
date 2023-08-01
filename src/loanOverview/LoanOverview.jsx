@@ -6,12 +6,16 @@ import Breadcrumbs from '@mui/material/Breadcrumbs';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Link } from 'react-router-dom';
 import LoanOverviewTab from './LoanOverviewTab';
+import { useLocation } from 'react-router-dom';
 
 const LoanOverview = () => {
+  const location = useLocation();
+  const { userInfo } = location.state || {};
   const [activeTabLabel, setActiveTabLabel] = React.useState(
     'General Information'
   );
-
+  // console.log(userInfo);
+  // console.log('userInfo: ' + userInfo);
   const handleTabChange = (event, newValue) => {
     const tabs = [
       '',
@@ -50,7 +54,7 @@ const LoanOverview = () => {
               <p className="breadcrumbs">{activeTabLabel}</p>
             </Breadcrumbs>
           </div>
-          <LoanOverviewTab onTabChange={handleTabChange} />
+          <LoanOverviewTab onTabChange={handleTabChange} data={userInfo} />
         </Box>
       </Box>
     </div>

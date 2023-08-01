@@ -30,7 +30,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     margin: 0,
     borderRadius: 10,
     backgroundColor: 'white',
-    boxShadow: 'none',
+    // boxShadow: 'none',
   },
   '& .MuiDialogContent-root': {
     padding: theme.spacing(2),
@@ -135,6 +135,11 @@ export default function ClientDialog({ table, tableData }) {
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}
+        sx={{
+          '& .MuiBackdrop-root': {
+            backgroundColor: 'transparent',
+          },
+        }}
       >
         <BootstrapDialogTitle
           id="customized-dialog-title"

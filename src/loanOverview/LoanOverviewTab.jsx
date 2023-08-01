@@ -11,7 +11,7 @@ import RiskScore from './RiskScore';
 import Documents from './Documents';
 import ProfileDetails from './ProfileDetails';
 
-const LoanOverviewTab = ({ onTabChange }) => {
+const LoanOverviewTab = ({ onTabChange, data }) => {
   const theme = useTheme();
   const isLargeScreen = useMediaQuery(theme.breakpoints.up('sm'));
 
@@ -28,7 +28,7 @@ const LoanOverviewTab = ({ onTabChange }) => {
         bgcolor: 'background.paper',
       }}
     >
-      <ProfileDetails />
+      <ProfileDetails data={data} />
       <Tabs
         value={value}
         onChange={handleChange}
@@ -128,7 +128,7 @@ const LoanOverviewTab = ({ onTabChange }) => {
         ></div>
       </Tabs>
       <TabPanel value={value} index={1}>
-        <GeneralInformation />
+        <GeneralInformation data={data} />
       </TabPanel>
       <TabPanel value={value} index={2}>
         <LoanApplications />

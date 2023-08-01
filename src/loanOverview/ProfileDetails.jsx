@@ -7,7 +7,7 @@ import { Button, Dialog, DialogContent, DialogTitle } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faCheck } from '@fortawesome/free-solid-svg-icons';
 
-const ProfileDetails = () => {
+const ProfileDetails = ({ data }) => {
   const [submissionMessage, setSubmissionMessage] = useState('');
   const [showNotification, setShowNotification] = useState(false);
   const [approveNotification, setApproveNotification] = useState('');
@@ -15,7 +15,9 @@ const ProfileDetails = () => {
 
   const handleApproveButtonClick = () => {
     setSubmissionMessage('');
-    setApproveNotification('Application Approved\nThe loan application has been successfully approved.');
+    setApproveNotification(
+      'Application Approved\nThe loan application has been successfully approved.'
+    );
     setShowNotification(true);
     setShowApproveNotification(true);
   };
@@ -45,21 +47,23 @@ const ProfileDetails = () => {
           alt="image"
           style={{ height: '150px', width: '150px', borderRadius: '50%' }}
         ></img>
-        <div className="highlighted">
-          <h3>Temidayo Adebayo</h3>
+        <div>
+          <h3>
+            {data.lender.firstName} {data.lender.lastName}
+          </h3>
           <p style={{ color: '#8dba80', fontSize: '12px' }}>
-            Case ID:RRZU9D6BVG
+            Case ID: {data.id}
           </p>
           <div className="loan-contact">
             <img src={telephone} alt="tel-icon" className="profile-icon" />
-            <p style={{ fontSize: '14px' }}> 09055555558 </p>
+            <p style={{ fontSize: '14px' }}> {data.lender.phoneNumber} </p>
             <img
               src={message}
               alt="tel-icon"
               style={{ color: 'red' }}
               className="profile-icon"
             />
-            <p>somebody@gmail.com</p>
+            <p>{data.lender.email}</p>
           </div>
           <div className="loan-type">
             <p style={{ fontWeight: 'bold' }}>Loan Officer:</p>
@@ -74,13 +78,14 @@ const ProfileDetails = () => {
         </div>
         <div className="loan-type pad-top">
           <p style={{ fontWeight: 'bold' }}>Loan Status:</p>
-          <p>Pending</p>
+          <p>{data.status}</p>
           <button className="small"></button>
         </div>
         <div className="btn-container">
-        <button className="approve" onClick={handleApproveButtonClick}>Approve</button>
+          <button className="approve" onClick={handleApproveButtonClick}>
+            Approve
+          </button>
           <form onSubmit={handleFormSubmit}>
-          
             <div>
               <Button
                 className="decline"
@@ -100,28 +105,33 @@ const ProfileDetails = () => {
           </form>
         </div>
         <Dialog
-  open={showApproveNotification}
-  onClose={() => setShowApproveNotification(false)}
-  style={{ border: '1px solid #8dba80' }}
->
-  <DialogTitle
-    style={{
-      color: '#00d43d',
-      fontSize: '50px',
-      padding: '50px 270px 0px',
-    }}
-  >
-    <FontAwesomeIcon className="check-icon" icon={faCheck} />
-  </DialogTitle>
-  <DialogContent
-    style={{
-      color: '#00d43d',
-      fontSize: '15px',
-      fontWeight: 'bolder',
-      padding: '0px 100px 50px',
-    }}
-  >
-    {approveNotification.split('\n').map((message, index) => (
+          open={showApproveNotification}
+          onClose={() => setShowApproveNotification(false)}
+          style={{ border: '1px solid #8dba80' }}
+          sx={{
+            '& .MuiBackdrop-root': {
+              backgroundColor: 'transparent',
+            },
+          }}
+        >
+          <DialogTitle
+            style={{
+              color: '#00d43d',
+              fontSize: '50px',
+              padding: '50px 270px 0px',
+            }}
+          >
+            <FontAwesomeIcon className="check-icon" icon={faCheck} />
+          </DialogTitle>
+          <DialogContent
+            style={{
+              color: '#00d43d',
+              fontSize: '15px',
+              fontWeight: 'bolder',
+              padding: '0px 100px 50px',
+            }}
+          >
+            {approveNotification.split('\n').map((message, index) => (
               <p
                 key={index}
                 style={{
@@ -132,13 +142,18 @@ const ProfileDetails = () => {
                 {message}
               </p>
             ))}
-  </DialogContent>
-</Dialog>
+          </DialogContent>
+        </Dialog>
 
         <Dialog
           open={submissionMessage !== ''}
           onClose={handleClose}
           style={{ border: '1px solid #d30744' }}
+          sx={{
+            '& .MuiBackdrop-root': {
+              backgroundColor: 'transparent',
+            },
+          }}
         >
           <DialogTitle
             style={{
